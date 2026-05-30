@@ -1,0 +1,43 @@
+/* Apple-style smooth scrolling and base settings */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+}
+
+/* Glassmorphism for fixed headers */
+.glass-header {
+  background: rgba(255, 248, 245, 0.7) !important; /* Adapt to background color if needed */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Reveal on scroll animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Apple style button hover effects */
+button, a.btn {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+button:active, a.btn:active {
+  transform: scale(0.95);
+}
+
+/* Parallax subtle effect */
+.parallax-image {
+  transition: transform 0.1s ease-out;
+}

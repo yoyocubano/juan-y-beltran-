@@ -105,29 +105,25 @@
             }
         }
     </script>
+  <link rel="stylesheet" href="apple-ux.css">
+  <script src="apple-ux.js" defer></script>
 </head>
-<body class="bg-surface text-on-surface font-body-md text-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<body class="bg-surface text-on-surface font-body-md text-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed" class="max-w-full overflow-x-hidden">
 <!-- TopNavBar Shared Component -->
-<header class="bg-surface dark:bg-surface w-full top-0 sticky z-50 border-b border-outline-variant/15 transition-all duration-300" id="global-nav">
+<header class="bg-surface dark:bg-surface w-full top-0 sticky z-50 border-b border-outline-variant/15 transition-all duration-300 glass-header sticky top-0 z-50" id="global-nav">
 <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto w-full">
 <!-- Logo -->
 <a class="font-headline-md text-headline-md font-normal text-primary dark:text-primary-fixed uppercase tracking-wider" href="#">
                 Juan Beltrán
             </a>
 <!-- Navigation Links (Desktop) -->
-<nav class="hidden md:flex items-center gap-gutter">
+<nav class="hidden md:flex items-center gap-gutter glass-header sticky top-0 z-50">
 <a class="font-body-md text-body-md tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors duration-300 ease-in-out cursor-pointer active:opacity-70 transition-opacity" href="#">
                     Catálogo
                 </a>
-<a class="font-body-md text-body-md tracking-wider text-secondary dark:text-secondary-fixed border-b border-secondary pb-1 transition-colors duration-300 ease-in-out cursor-pointer active:opacity-70 transition-opacity" href="#">
-                    Historias
-                </a>
-<a class="font-body-md text-body-md tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors duration-300 ease-in-out cursor-pointer active:opacity-70 transition-opacity" href="#">
-                    Blog
-                </a>
-<a class="font-body-md text-body-md tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors duration-300 ease-in-out cursor-pointer active:opacity-70 transition-opacity" href="#">
-                    Contacto
-                </a>
+<a class="font-body-md text-body-md tracking-wider text-secondary dark:text-secondary-fixed border-b border-secondary pb-1 transition-colors duration-300 ease-in-out cursor-pointer active:opacity-70 transition-opacity" href="#" onclick="window.location.href='Juan_&_Beltrán_-_Historias.html'" style="cursor:pointer;">Historias</a>
+<a class="font-body-md text-body-md tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors duration-300 ease-in-out cursor-pointer active:opacity-70 transition-opacity" href="#" onclick="window.location.href='Blog_-_Juan_&_Beltrán.html'" style="cursor:pointer;">Blog</a>
+<a class="font-body-md text-body-md tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors duration-300 ease-in-out cursor-pointer active:opacity-70 transition-opacity" href="#" onclick="window.location.href='Contacto_-_Juan_&_Beltrán.html'" style="cursor:pointer;">Contacto</a>
 </nav>
 <!-- Trailing Actions -->
 <div class="flex items-center gap-4">
@@ -147,10 +143,10 @@
 <!-- Main Content Canvas -->
 <main class="w-full">
 <!-- Hero: Featured Article -->
-<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-16 pb-32">
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-16 pb-32 reveal-on-scroll">
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
 <div class="md:col-span-8 order-2 md:order-1 relative group overflow-hidden rounded-DEFAULT">
-<img alt="El Arte del Curtido Featured Image" class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A stunning, high-fashion editorial photograph of a master craftsman in a sunlit, rustic Argentinian workshop. The scene captures the 'Modern Estancia' aesthetic with sophisticated minimalism. The lighting is natural and warm, highlighting the rich, textured grain of a large piece of premium cognac-colored leather spread across a weathered wooden table. The surrounding environment features bone white walls and subtle deep cacao accents, evoking a sense of quiet luxury, artisanal precision, and slow fashion heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtuIXz0jlWw8y_rIyv5UV_EjagZLTkyKA83ZhoLrRUTBQmv0PCtEK_KeW2joMoVJfEjO-tXdnHvLDzvsXX8N2GkRiwTE8gaoSGG8QibUJ8dFYEQuafEhuYz0InTdtdizOzgrDmvPDSo0GqF1vIlT1ZBkG3SBkivy6f17mispmzig99fISFCHOU3RDzoJQnlYg9679eiynFm6UX93OihG3XQ22S6YpJ2qyXjWVMGNKIlyTHk0zBxCLKsaCwQcvj2MerTPGeJ0j8GiU"/>
+<img alt="El Arte del Curtido Featured Image" class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105 parallax-image" data-alt="A stunning, high-fashion editorial photograph of a master craftsman in a sunlit, rustic Argentinian workshop. The scene captures the 'Modern Estancia' aesthetic with sophisticated minimalism. The lighting is natural and warm, highlighting the rich, textured grain of a large piece of premium cognac-colored leather spread across a weathered wooden table. The surrounding environment features bone white walls and subtle deep cacao accents, evoking a sense of quiet luxury, artisanal precision, and slow fashion heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtuIXz0jlWw8y_rIyv5UV_EjagZLTkyKA83ZhoLrRUTBQmv0PCtEK_KeW2joMoVJfEjO-tXdnHvLDzvsXX8N2GkRiwTE8gaoSGG8QibUJ8dFYEQuafEhuYz0InTdtdizOzgrDmvPDSo0GqF1vIlT1ZBkG3SBkivy6f17mispmzig99fISFCHOU3RDzoJQnlYg9679eiynFm6UX93OihG3XQ22S6YpJ2qyXjWVMGNKIlyTHk0zBxCLKsaCwQcvj2MerTPGeJ0j8GiU"/>
 </div>
 <div class="md:col-span-4 order-1 md:order-2 pb-8 md:pb-12 md:pl-8">
 <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-4">Editorial Destacado</span>
@@ -165,7 +161,7 @@
 </div>
 </section>
 <!-- Section: El Arte del Curtido (Asymmetric Layout) -->
-<section class="bg-surface-container-low py-32">
+<section class="bg-surface-container-low py-32 reveal-on-scroll">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="flex flex-col md:flex-row gap-gutter justify-between items-start mb-24">
 <div class="md:w-1/3 sticky top-32">
@@ -179,21 +175,21 @@
 </div>
 <div class="md:w-7/12 flex flex-col gap-32 mt-16 md:mt-0">
 <div class="w-full relative">
-<img alt="Detalle de costura a mano" class="w-full aspect-square object-cover shadow-[0_20px_40px_-15px_rgba(74,44,42,0.08)]" data-alt="Close-up macro photography of hands meticulously stitching heavy, high-quality leather using traditional techniques. The composition reflects a tactile, artisanal elegance central to a luxury boutique brand. Deep cacao tones of the leather contrast beautifully against crisp, bone white background elements. Soft, ambient shadows create depth without harshness, emphasizing the organic textures and the slow, deliberate pace of true craftsmanship in a sophisticated, minimalist setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSiHHcZRPoBdho0vdaW-OTnGnn0NnScsCe7Yth3iz34ymc1v6mfnwra3glTN3bHU5mEIcYNAc_sFHy8m3fiZafFA2GJP6vfuzyUKDbyuFF9xIOB8ok4CurUJgR83itG_khGP1-4abtOPS4VuvY0Y4GajjTL_UGeKUsdSCN9o8oKJGRKFGiJR_rxX6nBZLW1hZQhjDO6b9iSl-qE4J4NFSqQMhjhG1DOvRz-TxH11GXkOBfiacG9vCkZqa_kiMSp3lOEbYV11xOUm4"/>
+<img alt="Detalle de costura a mano" class="w-full aspect-square object-cover shadow-[0_20px_40px_-15px_rgba(74,44,42,0.08)] parallax-image" data-alt="Close-up macro photography of hands meticulously stitching heavy, high-quality leather using traditional techniques. The composition reflects a tactile, artisanal elegance central to a luxury boutique brand. Deep cacao tones of the leather contrast beautifully against crisp, bone white background elements. Soft, ambient shadows create depth without harshness, emphasizing the organic textures and the slow, deliberate pace of true craftsmanship in a sophisticated, minimalist setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSiHHcZRPoBdho0vdaW-OTnGnn0NnScsCe7Yth3iz34ymc1v6mfnwra3glTN3bHU5mEIcYNAc_sFHy8m3fiZafFA2GJP6vfuzyUKDbyuFF9xIOB8ok4CurUJgR83itG_khGP1-4abtOPS4VuvY0Y4GajjTL_UGeKUsdSCN9o8oKJGRKFGiJR_rxX6nBZLW1hZQhjDO6b9iSl-qE4J4NFSqQMhjhG1DOvRz-TxH11GXkOBfiacG9vCkZqa_kiMSp3lOEbYV11xOUm4"/>
 <div class="absolute -bottom-8 -left-8 bg-surface p-6 border border-outline-variant/20 shadow-sm max-w-xs hidden md:block">
 <p class="font-label-caps text-label-caps text-secondary uppercase mb-2">Técnica</p>
 <p class="font-body-md text-body-md text-primary">Costura a dos agujas, un hilo inquebrantable.</p>
 </div>
 </div>
 <div class="w-10/12 ml-auto relative">
-<img alt="Herramientas tradicionales" class="w-full aspect-[4/5] object-cover shadow-[0_20px_40px_-15px_rgba(74,44,42,0.08)]" data-alt="An atmospheric, minimalist still life featuring traditional leatherworking tools—an awl, heavy waxed thread, and a cutting knife—resting on an expanse of pristine bone white canvas. A swatch of raw, textured cognac leather lies beside them. The image embodies understated elegance with editorial pacing, utilizing generous negative space. The lighting is soft and diffused, casting gentle, ambient shadows that enhance the tactile quality and rugged heritage of the scene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyCvLu2_9Ke5D25OFgFnLNAkGvnSX5DK_BJh1hn6IjCH7DKY8yr0w4F6Ka2ksGnEy0f_2tiPd9FpVzioY_hlE4sbMsmIpIpQxmya_ZIvEoUJU4eo6L_NFGYbYRoo5YSs1mlkem2791lFwPGFDEwEQrzIIzlJVEmDBn-BsgLwux3IJz8jI8ZXcAK0E6odQ1JuouoGgMC7fOVb59Uf5JUfomJqCPw2PMSYHLSZpRLt04Ocqdsb89od8jDKlQQ4-Ix7LFrGwau-YhtcE"/>
+<img alt="Herramientas tradicionales" class="w-full aspect-[4/5] object-cover shadow-[0_20px_40px_-15px_rgba(74,44,42,0.08)] parallax-image" data-alt="An atmospheric, minimalist still life featuring traditional leatherworking tools—an awl, heavy waxed thread, and a cutting knife—resting on an expanse of pristine bone white canvas. A swatch of raw, textured cognac leather lies beside them. The image embodies understated elegance with editorial pacing, utilizing generous negative space. The lighting is soft and diffused, casting gentle, ambient shadows that enhance the tactile quality and rugged heritage of the scene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyCvLu2_9Ke5D25OFgFnLNAkGvnSX5DK_BJh1hn6IjCH7DKY8yr0w4F6Ka2ksGnEy0f_2tiPd9FpVzioY_hlE4sbMsmIpIpQxmya_ZIvEoUJU4eo6L_NFGYbYRoo5YSs1mlkem2791lFwPGFDEwEQrzIIzlJVEmDBn-BsgLwux3IJz8jI8ZXcAK0E6odQ1JuouoGgMC7fOVb59Uf5JUfomJqCPw2PMSYHLSZpRLt04Ocqdsb89od8jDKlQQ4-Ix7LFrGwau-YhtcE"/>
 </div>
 </div>
 </div>
 </div>
 </section>
 <!-- Section: Historias de Taller (Grid) -->
-<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-32">
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-32 reveal-on-scroll">
 <div class="mb-16 border-b border-outline-variant/20 pb-8 flex justify-between items-end">
 <h2 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary">Historias de Taller</h2>
 <a class="hidden md:inline-flex items-center gap-2 font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#">
@@ -202,9 +198,9 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter gap-y-16">
 <!-- Story Card 1 -->
-<article class="group cursor-pointer">
+<article class="group cursor-pointer reveal-on-scroll">
 <div class="overflow-hidden mb-6 aspect-[3/4] bg-surface-container-high rounded-DEFAULT">
-<img alt="Paisaje de la Estancia" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A beautiful, wide-angle landscape shot of a rugged Argentinian estancia at golden hour, blended with modern architectural elements. The scene conveys a blend of heritage and contemporary luxury. Warm cognac sunlight bathes the dry grasslands, contrasting with deep cacao shadows of the surrounding trees. The sky is a soft, pale tone. The overall composition is peaceful, minimalist, and perfectly aligned with a sophisticated, earth-bound brand palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh09QoamEqq_j_Q8P1twtC7pRffuyvaGra_R4uFZDSRMvLWu2OVcwhablvptNRo0VoZwHXjz93XX4gdHnqU-SEq9CKXdCyA8qVtmx_sXiFCDMhyMJSNXZYqK-b8a0WLxfAiRiKCnqZKXGs3t0oeT_Ltw5Ked2zKvrJqSeFRT2KaamfSMlsP0sm3p0c3EByZbh2nmb09j3N32J5zzGpiCidT2uDOhGJCnwdMhm33tzOg52TXLYL3v5TMubDyhudITlrg63ytTvZjwI"/>
+<img alt="Paisaje de la Estancia" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 parallax-image" data-alt="A beautiful, wide-angle landscape shot of a rugged Argentinian estancia at golden hour, blended with modern architectural elements. The scene conveys a blend of heritage and contemporary luxury. Warm cognac sunlight bathes the dry grasslands, contrasting with deep cacao shadows of the surrounding trees. The sky is a soft, pale tone. The overall composition is peaceful, minimalist, and perfectly aligned with a sophisticated, earth-bound brand palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh09QoamEqq_j_Q8P1twtC7pRffuyvaGra_R4uFZDSRMvLWu2OVcwhablvptNRo0VoZwHXjz93XX4gdHnqU-SEq9CKXdCyA8qVtmx_sXiFCDMhyMJSNXZYqK-b8a0WLxfAiRiKCnqZKXGs3t0oeT_Ltw5Ked2zKvrJqSeFRT2KaamfSMlsP0sm3p0c3EByZbh2nmb09j3N32J5zzGpiCidT2uDOhGJCnwdMhm33tzOg52TXLYL3v5TMubDyhudITlrg63ytTvZjwI"/>
 </div>
 <div class="flex items-center gap-3 mb-3">
 <span class="inline-block bg-surface-container-highest text-primary font-label-caps text-label-caps px-2 py-1 rounded-sm">Herencia</span>
@@ -214,9 +210,9 @@
 <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Cómo el paisaje árido y vasto de nuestras tierras inspira la paleta de colores de la nueva colección de temporada.</p>
 </article>
 <!-- Story Card 2 -->
-<article class="group cursor-pointer">
+<article class="group cursor-pointer reveal-on-scroll">
 <div class="overflow-hidden mb-6 aspect-[3/4] bg-surface-container-high rounded-DEFAULT">
-<img alt="Bolso de viaje terminado" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Detail shot of a finished luxury leather weekender bag resting on a polished, bone white surface. The bag features exceptional artisanal precision, with visible hand-stitched details and a deep cacao finish. The environment is styled with sophisticated minimalism, avoiding any visual clutter to let the product's quality shine. Soft, ambient lighting creates gentle shadows, highlighting the organic texture and premium nature of the materials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAustsk9XuGck6LfllGE_xigW_j_8z0u9L95_aFir7VyUAQAwYvvoBByXxDfJ3Q4Qtme6GvIMUjP0frDf3TdxZhT8Gnps9ReQ7FhosWA3i3jRnQsjogcpIl3YQ7yzxrJLgNlrxJh1d3QDk4-VJ-wM5DhGjU6iX4b5rG1fGKMroC9wECzzBfiTYF4nutK1GWIxlzU0TcpY_DinYnkofB4qOuL15dX8DgN-foZ-FaSbM28WyiW5zuWPQBwT90M6UztL-UG0sBMWPmV_8"/>
+<img alt="Bolso de viaje terminado" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 parallax-image" data-alt="Detail shot of a finished luxury leather weekender bag resting on a polished, bone white surface. The bag features exceptional artisanal precision, with visible hand-stitched details and a deep cacao finish. The environment is styled with sophisticated minimalism, avoiding any visual clutter to let the product's quality shine. Soft, ambient lighting creates gentle shadows, highlighting the organic texture and premium nature of the materials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAustsk9XuGck6LfllGE_xigW_j_8z0u9L95_aFir7VyUAQAwYvvoBByXxDfJ3Q4Qtme6GvIMUjP0frDf3TdxZhT8Gnps9ReQ7FhosWA3i3jRnQsjogcpIl3YQ7yzxrJLgNlrxJh1d3QDk4-VJ-wM5DhGjU6iX4b5rG1fGKMroC9wECzzBfiTYF4nutK1GWIxlzU0TcpY_DinYnkofB4qOuL15dX8DgN-foZ-FaSbM28WyiW5zuWPQBwT90M6UztL-UG0sBMWPmV_8"/>
 </div>
 <div class="flex items-center gap-3 mb-3">
 <span class="inline-block bg-surface-container-highest text-primary font-label-caps text-label-caps px-2 py-1 rounded-sm">Diseño</span>
@@ -226,9 +222,9 @@
 <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Desglosando los 45 pasos meticulosos requeridos para ensamblar nuestro icónico bolso de fin de semana.</p>
 </article>
 <!-- Story Card 3 -->
-<article class="group cursor-pointer">
+<article class="group cursor-pointer reveal-on-scroll">
 <div class="overflow-hidden mb-6 aspect-[3/4] bg-surface-container-high rounded-DEFAULT">
-<img alt="Artesano en el taller" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A portrait of a contemporary artisan examining a raw hide in a minimalist, light-filled studio. The mood is focused and serene, reflecting a dedication to slow fashion. The setting uses a strict palette of bone white and soft slate grey, allowing the rich cognac color of the leather to be the focal point. The composition relies on fixed grid alignment and elegant negative space, evoking quiet luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2MtSQX5V4-JbMxyd_LQdgzCuyHpJd5bJRJLqARJ2XnHuJNpr3FD-F38ZX9eVxvjd3BH4B8cmALpcjohbf5X_HgW_hhekdlTFbzexj-Z3f38Z9DSmNIYJ1MU4vNHwzMEKDToq5_bAHFn32fdMBe0irNaoJnPgyitdAP1gJfv0WSPOvIIXvoRxEmp024-1Bu2ujv8QWATwqQ-9urdnG7jMsAA2V_9FiUpUoPBnduaPQuTSvKd2Yr7NjMDN6znbN9_PLflBS9P_h9_8"/>
+<img alt="Artesano en el taller" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 parallax-image" data-alt="A portrait of a contemporary artisan examining a raw hide in a minimalist, light-filled studio. The mood is focused and serene, reflecting a dedication to slow fashion. The setting uses a strict palette of bone white and soft slate grey, allowing the rich cognac color of the leather to be the focal point. The composition relies on fixed grid alignment and elegant negative space, evoking quiet luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2MtSQX5V4-JbMxyd_LQdgzCuyHpJd5bJRJLqARJ2XnHuJNpr3FD-F38ZX9eVxvjd3BH4B8cmALpcjohbf5X_HgW_hhekdlTFbzexj-Z3f38Z9DSmNIYJ1MU4vNHwzMEKDToq5_bAHFn32fdMBe0irNaoJnPgyitdAP1gJfv0WSPOvIIXvoRxEmp024-1Bu2ujv8QWATwqQ-9urdnG7jMsAA2V_9FiUpUoPBnduaPQuTSvKd2Yr7NjMDN6znbN9_PLflBS9P_h9_8"/>
 </div>
 <div class="flex items-center gap-3 mb-3">
 <span class="inline-block bg-surface-container-highest text-primary font-label-caps text-label-caps px-2 py-1 rounded-sm">Perfiles</span>
