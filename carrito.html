@@ -165,7 +165,7 @@
 </button>
 <button aria-label="Carrito" class="hover:text-primary-container transition-colors relative">
 <span class="material-symbols-outlined fill">shopping_bag</span>
-<span class="absolute -top-1 -right-1 bg-tertiary text-on-tertiary text-[10px] w-4 h-4 rounded-full flex items-center justify-center">2</span>
+<span class="shopping-cart-badge absolute -top-1 -right-1 bg-tertiary text-on-tertiary text-[10px] w-4 h-4 rounded-full flex items-center justify-center" style="display: none;">0</span>
 </button>
 </div>
 </header>
@@ -178,53 +178,8 @@
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
 <!-- Cart Items -->
 <div class="lg:col-span-7 flex flex-col gap-8">
-<!-- Item 1 -->
-<div class="flex flex-col sm:flex-row gap-6 p-6 border border-outline-variant bg-surface relative group">
-<button aria-label="Eliminar" class="absolute top-4 right-4 text-outline hover:text-error transition-colors">
-<span class="material-symbols-outlined">close</span>
-</button>
-<div class="w-full sm:w-32 h-40 sm:h-auto flex-shrink-0 bg-surface-container-low border border-outline-variant relative overflow-hidden">
-<img alt="Manta tejida a mano" class="absolute inset-0 w-full h-full object-cover parallax-image" data-alt="A beautifully handcrafted woven blanket, resting over the arm of a wooden chair in a sunlit room. The light mode aesthetic features soft, warm sunlight highlighting the intricate textures of the yarn. The color palette focuses on creamy whites, soft terracottas, and earthy sage greens, creating a nostalgic, tactile, and comforting mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFAEifaeiuudETfKRojkrpvLes4NL35RtZDZ_kk8xrOJGcSlcFEG6HfVsd3Y2tOlK5E1yht4fxFeeVH-RpE2_LBsef3hiE0v4ElQb4XURbBM7hsjNSCD5TmdGWbBm6xHtRqzap0GYD7bq4eJR9YkKCl50bcG_jzTSOASLBy6VLQENEjgPOkbPmaIMxdp3YSnoWcboBDzrlFfyWSTCOfnYYhcQDS9f0iuP69eG4U_p0DUpr0gvM_3PaT3yoMwaq-IRmf9SXpe2qSAI"/>
-</div>
-<div class="flex flex-col justify-between flex-grow">
-<div>
-<span class="inline-block px-2 py-1 bg-secondary-container text-on-secondary-container text-label-sm font-label-sm mb-2 opacity-80">Tejido a Mano</span>
-<h3 class="text-headline-md font-headline-md text-on-background mb-1">Manta 'Abrazo del Sur'</h3>
-<p class="text-body-md font-body-md text-on-surface-variant mb-4">Lana merino pura, color crudo natural.</p>
-</div>
-<div class="flex justify-between items-center mt-auto">
-<div class="flex items-center border border-outline-variant rounded bg-surface-container-lowest">
-<button class="px-3 py-1 text-on-surface-variant hover:text-primary" onclick="updateQty(this, -1)">-</button>
-<input class="w-10 text-center bg-transparent border-none text-body-md font-body-md p-0 focus:ring-0" min="1" type="number" value="1"/>
-<button class="px-3 py-1 text-on-surface-variant hover:text-primary" onclick="updateQty(this, 1)">+</button>
-</div>
-<span class="text-body-lg font-body-lg text-primary">$45.000</span>
-</div>
-</div>
-</div>
-<!-- Item 2 -->
-<div class="flex flex-col sm:flex-row gap-6 p-6 border border-outline-variant bg-surface relative group">
-<button aria-label="Eliminar" class="absolute top-4 right-4 text-outline hover:text-error transition-colors">
-<span class="material-symbols-outlined">close</span>
-</button>
-<div class="w-full sm:w-32 h-40 sm:h-auto flex-shrink-0 bg-surface-container-low border border-outline-variant relative overflow-hidden">
-<img alt="Vela artesanal en cuenco de cerámica" class="absolute inset-0 w-full h-full object-cover parallax-image" data-alt="A handmade ceramic bowl filled with creamy soy wax, functioning as a candle. It sits on a rustic wooden table scattered with dried botanical elements. The scene uses a light mode aesthetic with soft, diffused daylight. The colors are dominated by warm whites, deep browns, and subtle natural earthy tones, evoking a serene and sensory luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7Bp4Cbees8_l5pdd65sS9lZudv2Hs-pmcRSMN-8aXE6NZAlIA2wwYU7W6vh9s7iqYon7cucd0b7wQIKBNoLa6r7fFjLKzbPJZP634IVVO9gxVuvYfmGfJAiiJmcKFnzKG6jl5Ncp3uObWSNqXx-nQL4u0tayUdMFL-kE6g39GRE9tWufX5VqlhvWBcACSR3FVpDz3eX4-n8_MOLIUxJmSDbx48t8LCDkW_nCpXjRxOOxpu9hl42j24kDMS8BObmLTFsZb-khRiFQ"/>
-</div>
-<div class="flex flex-col justify-between flex-grow">
-<div>
-<span class="inline-block px-2 py-1 bg-secondary-container text-on-secondary-container text-label-sm font-label-sm mb-2 opacity-80">Edición Limitada</span>
-<h3 class="text-headline-md font-headline-md text-on-background mb-1">Luz de Invierno</h3>
-<p class="text-body-md font-body-md text-on-surface-variant mb-4">Vela de soja en cuenco de cerámica patagónica.</p>
-</div>
-<div class="flex justify-between items-center mt-auto">
-<div class="flex items-center border border-outline-variant rounded bg-surface-container-lowest">
-<button class="px-3 py-1 text-on-surface-variant hover:text-primary" onclick="updateQty(this, -1)">-</button>
-<input class="w-10 text-center bg-transparent border-none text-body-md font-body-md p-0 focus:ring-0" min="1" type="number" value="2"/>
-<button class="px-3 py-1 text-on-surface-variant hover:text-primary" onclick="updateQty(this, 1)">+</button>
-</div>
-<span class="text-body-lg font-body-lg text-primary">$18.500</span>
-</div>
-</div>
+<div id="cart-items-container" class="flex flex-col gap-8 w-full">
+<!-- Item list rendered by backend.js -->
 </div>
 <!-- Gift Message Section -->
 <div class="mt-8 p-8 border border-outline-variant bg-surface-container-low relative">
@@ -237,7 +192,7 @@
                     </h3>
 <p class="text-body-md font-body-md text-on-surface-variant mb-6">Escribiremos tu mensaje a mano en una tarjeta de papel plantable que acompañará tu pedido.</p>
 <div class="relative">
-<textarea class="w-full bg-surface-container-lowest border-b border-outline-variant border-x-0 border-t-0 focus:border-primary focus:ring-0 resize-none text-body-md font-body-md text-on-background p-4" placeholder="Escribe aquí las palabras que quieras abrazar..." rows="4"></textarea>
+<textarea id="gift-message" class="w-full bg-surface-container-lowest border-b border-outline-variant border-x-0 border-t-0 focus:border-primary focus:ring-0 resize-none text-body-md font-body-md text-on-background p-4" placeholder="Escribe aquí las palabras que quieras abrazar..." rows="4"></textarea>
 </div>
 </div>
 </div>
@@ -247,8 +202,8 @@
 <h2 class="text-headline-md font-headline-md text-on-background mb-6 border-b border-outline-variant pb-4">Resumen de la Historia</h2>
 <div class="flex flex-col gap-4 mb-8">
 <div class="flex justify-between text-body-md font-body-md text-on-surface-variant">
-<span>Subtotal (3 artículos)</span>
-<span>$82.000</span>
+<span>Subtotal</span>
+<span id="cart-subtotal">$0</span>
 </div>
 <div class="flex justify-between text-body-md font-body-md text-on-surface-variant">
 <span>Envío</span>
@@ -257,9 +212,9 @@
 </div>
 <div class="flex justify-between items-center mb-8 border-t border-outline-variant pt-6">
 <span class="text-body-lg font-body-lg text-on-background">Total estimado</span>
-<span class="text-headline-lg font-headline-lg text-primary">$82.000</span>
+<span id="cart-total" class="text-headline-lg font-headline-lg text-primary">$0</span>
 </div>
-<button class="w-full bg-primary text-on-primary rounded py-4 text-label-md font-label-md uppercase tracking-wider hover:bg-primary-container transition-colors flex items-center justify-center gap-2 mb-4">
+<button onclick="window.cart.checkout()" class="w-full bg-primary text-on-primary rounded py-4 text-label-md font-label-md uppercase tracking-wider hover:bg-primary-container transition-colors flex items-center justify-center gap-2 mb-4">
 <span class="material-symbols-outlined fill">chat</span>
                         Finalizar por WhatsApp
                     </button>
@@ -317,13 +272,8 @@
 </div>
 </footer>
 <script>
-        function updateQty(btn, change) {
-            const input = btn.parentElement.querySelector('input');
-            let val = parseInt(input.value) + change;
-            if(val >= 1) {
-                input.value = val;
-                // In a real app, trigger cart total update here
-            }
-        }
+        // Logic handled globally in backend.js
     </script>
+
+    <script type="module" src="js/backend.js"></script>
 </body></html>

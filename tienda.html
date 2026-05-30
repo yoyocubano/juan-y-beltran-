@@ -191,9 +191,9 @@
                     </p>
 <div class="flex items-center justify-between mt-auto">
 <span class="text-body-lg font-body-lg text-primary-container">$45.000 ARS</span>
-<button class="bg-primary hover:bg-primary-container text-on-primary rounded-full px-6 py-2 text-label-md font-label-md transition-colors flex items-center gap-2">
-<span>Ver Detalles</span>
-<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+<button onclick="window.cart.add({id:'tote-bag', name:'Tote Bag Personalizada', price:45000, image:'https://lh3.googleusercontent.com/aida-public/AB6AXuDzpvDCxfWTxLtazWSceMNgWuWy235YnFGQa9BbOeTqBWttcwCnYVMtvm-8iTt2XzXqAexsJ1pJEewFwrn2knJu_eEB2MOnJMlPOD7amuL735R16bBaFKR66bePbPi0IV2XxnF9OOkNwpAV76QEH9gv2n5HgSMsHQg_o7fxY5P-fB_XZpu2DZevzTSNDtyfIG7VDhrYaRMMdaIFm2gSRlDOrVPH-n9y28R5HTYrzELRZp2xoJcrPrSikgYHws33-3Fp0QCGjVCcgfc', desc:'Tu mascota, siempre con vos'})" class="bg-primary hover:bg-primary-container text-on-primary rounded-full px-6 py-2 text-label-md font-label-md transition-colors flex items-center gap-2">
+<span>Agregar al carrito</span>
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
 </button>
 </div>
 </div>
@@ -210,7 +210,7 @@
                     </p>
 <div class="mt-auto flex flex-col items-center gap-3">
 <span class="text-body-lg font-body-lg text-primary-container">$32.000 ARS</span>
-<button class="w-full border border-outline hover:border-primary text-on-surface hover:text-primary rounded-full px-4 py-2 text-label-md font-label-md transition-colors">
+<button onclick="window.cart.add({id:'almohadon-dulzura', name:'Almohadón Dulzura', price:32000, image:'https://lh3.googleusercontent.com/aida-public/AB6AXuAfwn7KGsjqRhiChuDv1jrnJlndKnLDsCD6iN-xLfsUs3RK_7iiJfxEm9cNecQukgci-FUGT7yK1V5l_sR7i47Idt8zKTxvK-staJuyRVcvehGX_MyZRpFpLNBI7FB4zfqKOQhcn7JSISTNUHohZjwjSU215_6VwTO2i06js-GYgy0lxVI9vWoPBSt8Bqyf07wHBpfFaZBCTD2gtfbmQqWfRwhjrmk2TIaGWrMf1HN0kD2Lf_c7ETs1ztbSChh9-55yTegA5OaicpU', desc:'Un rincón de ternura'})" class="w-full border border-outline hover:border-primary text-on-surface hover:text-primary rounded-full px-4 py-2 text-label-md font-label-md transition-colors">
                             Agregar al carrito
                         </button>
 </div>
@@ -231,7 +231,7 @@
                     </p>
 <div class="mt-auto flex flex-col items-center gap-3">
 <span class="text-body-lg font-body-lg text-primary-container">$18.500 ARS</span>
-<button class="w-full border border-outline hover:border-primary text-on-surface hover:text-primary rounded-full px-4 py-2 text-label-md font-label-md transition-colors">
+<button onclick="window.cart.add({id:'taza-huellas', name:'Taza Huellas', price:18500, image:'https://lh3.googleusercontent.com/aida-public/AB6AXuCY_irvg2SEK9TcFzYGw5F6r4PO-p5qZCSFcB6yusAs9DR_IjHZWYNF1C5h79GphSPl9gIwmmULKeoENbd_B4dfAbmSvbPG1Vd67s2yJb-0U5XakaV1gehbwuxtOnDs6khYDj1dzu1xr9SnZujOeA42B-z9tYgrkuxNKqGmIBRF0sk2Bqt1Kxd06rDGke1IJO1ZcNggToz6mq7V_i18X5KPM987si4AYakL9QB8MhNVy03R2OsGhnBQVjzJKfF4UcZAjKvL-S6oi0g', desc:'Cerámica artesanal'})" class="w-full border border-outline hover:border-primary text-on-surface hover:text-primary rounded-full px-4 py-2 text-label-md font-label-md transition-colors">
                             Agregar al carrito
                         </button>
 </div>
@@ -292,4 +292,6 @@
 <a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform Focus: ring-1 ring-primary" href="#">Artesanía Argentina</a>
 </div>
 </footer>
+
+    <script type="module" src="js/backend.js"></script>
 </body></html>
