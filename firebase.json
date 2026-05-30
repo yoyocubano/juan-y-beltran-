@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "juan-y-beltran-store",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
