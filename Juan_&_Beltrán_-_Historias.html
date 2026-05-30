@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Juan &amp; Beltrán - El Diario de Beltrán</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#fff8f5",
+                        "on-primary-container": "#fffbff",
+                        "on-surface": "#28180b",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#3e4b2f",
+                        "outline-variant": "#d9c2ba",
+                        "primary-fixed-dim": "#ffb599",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#5b694a",
+                        "on-tertiary-fixed": "#211b0c",
+                        "on-tertiary-fixed-variant": "#4e4635",
+                        "surface-tint": "#8e4c31",
+                        "on-tertiary-container": "#fffbff",
+                        "tertiary-fixed-dim": "#d2c5ae",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#ffb599",
+                        "on-background": "#28180b",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#eee1c9",
+                        "primary-container": "#a96245",
+                        "primary-fixed": "#ffdbce",
+                        "inverse-on-surface": "#ffede3",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#fff8f5",
+                        "tertiary": "#645b49",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#fcddc7",
+                        "surface-container-low": "#fff1e9",
+                        "surface-container": "#ffeadc",
+                        "on-primary-fixed-variant": "#71361c",
+                        "secondary-fixed": "#d8e8c2",
+                        "secondary": "#556345",
+                        "surface-variant": "#fcddc7",
+                        "outline": "#86736c",
+                        "tertiary-container": "#7d7360",
+                        "secondary-container": "#d8e8c2",
+                        "surface-container-high": "#ffe3d0",
+                        "secondary-fixed-dim": "#bdcca7",
+                        "surface": "#fff8f5",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#53433d",
+                        "inverse-surface": "#3f2d1e",
+                        "primary": "#8c4a2f",
+                        "on-primary-fixed": "#370e00",
+                        "surface-dim": "#f3d4bf",
+                        "on-secondary-fixed": "#131f07",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Montserrat"],
+                        "label-sm": ["Montserrat"],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "headline-md": ["Libre Caslon Text"],
+                        "body-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Custom Utilities and Textures */
+        .texture-paper {
+            position: relative;
+        }
+        .texture-paper::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+        .content-relative { position: relative; z-index: 10; }
+        
+        .scrapbook-border {
+            border: 1px solid theme('colors.outline-variant');
+        }
+        
+        .scrapbook-card {
+            border: 1px solid theme('colors.outline-variant');
+            background-color: theme('colors.surface-container-lowest');
+        }
+        
+        /* Typography overrides for emphasis */
+        .brand-serif { font-family: 'Libre Caslon Text', serif; }
+        .brand-sans { font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased texture-paper min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full bg-background/95 backdrop-blur-sm z-50 fixed top-0 border-b border-outline-variant content-relative">
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex gap-gutter items-center">
+<a aria-current="page" class="text-primary font-bold border-b-2 border-primary pb-1 text-label-md font-label-md uppercase opacity-80 scale-98 transition-all" href="#">Historias</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md uppercase hover:text-primary-container transition-all" href="#">Tienda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md uppercase hover:text-primary-container transition-all" href="#">Nosotros</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md uppercase hover:text-primary-container transition-all" href="#">Contacto</a>
+</nav>
+<!-- Brand Logo -->
+<div class="absolute left-1/2 -translate-x-1/2">
+<a class="text-headline-lg font-headline-lg text-primary dark:text-primary-fixed-dim brand-serif tracking-tight font-extrabold text-center block" href="#">
+                Juan &amp; Beltrán
+            </a>
+</div>
+<!-- Trailing Icons -->
+<div class="flex gap-4 items-center">
+<button class="text-primary dark:text-primary-fixed-dim hover:text-primary-container transition-all focus:outline-none">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+<button class="text-primary dark:text-primary-fixed-dim hover:text-primary-container transition-all focus:outline-none">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow content-relative pt-[100px] pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Page Header -->
+<section class="text-center py-16 md:py-24 max-w-3xl mx-auto">
+<h1 class="text-display-lg font-display-lg brand-serif text-primary mb-6">El Diario de Beltrán</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+                Historias que se pueden abrazar. Un espacio dedicado a los recuerdos, la artesanía y el vínculo inquebrantable que compartimos con nuestros compañeros de vida.
+            </p>
+<div class="flex justify-center mt-8 text-outline-variant">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</div>
+</section>
+<!-- Featured Story (The Story Block) -->
+<section class="mb-24 md:mb-32">
+<article class="flex flex-col md:flex-row gap-12 md:gap-24 items-center">
+<div class="w-full md:w-1/2 relative">
+<div class="aspect-[4/5] overflow-hidden scrapbook-card p-2 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
+<img alt="Featured Story Image" class="w-full h-full object-cover filter contrast-110 brightness-95" data-alt="A warm, cinematic photograph of a child and an orange cat sitting together, looking out a window. Soft, golden hour light bathes the scene, creating a nostalgic and deeply emotional mood. The aesthetic is tactile and high-end, fitting for a premium artisanal brand. The color palette features warm creams, terracotta, and soft greens, perfectly aligned with the 'Juan &amp; Beltrán' identity. The focus is on the emotional connection between the two subjects." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyYulnnCC1Js3cWohQvwIdhWgR2OO6O1CoRL4NcRtp8BQoYwFbnlLgk21khAGW-Eqj6ZsSsFSkF3qCONtGEJCxIPPrPofZ96Rn4ki2Nz-AmHwKAuSO12xHbb0gMS0mWhb2YeeCQQVRuQ5d9bDe-_5AgyurExSbm7CNrX6rlbbWrgY2NcFyaPTwBdbfVG8keqGbLSaKhQq3C48eYSnh2D_2sAXAH3SM70mpNHgHXH-q5HIYH-oOGelkEPAwADG2IGMT4FPLwE88pYA"/>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -bottom-6 -right-6 text-secondary bg-surface-container-low p-3 rounded-full scrapbook-border transform rotate-12">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0;">pets</span>
+</div>
+</div>
+<div class="w-full md:w-1/2 flex flex-col justify-center">
+<span class="text-label-sm font-label-sm uppercase tracking-widest text-primary mb-4 block">Historia Principal</span>
+<h2 class="text-headline-lg font-headline-lg brand-serif text-on-surface mb-6 leading-tight">
+                        El vínculo entre Juan y Beltrán: Más allá de las palabras.
+                    </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-8 leading-relaxed text-justify">
+                        En un mundo que a menudo se siente demasiado rápido, encontramos refugio en las cosas que permanecen constantes. Para nosotros, ese refugio siempre ha sido el sonido de unos pasos pequeños siguiendo los nuestros, la presencia silenciosa pero abrumadora de un amor que no necesita traducción. Esta es la historia de cómo un niño y su compañero aprendieron el lenguaje del cuidado mutuo, y cómo ese mismo cuidado inspira cada puntada que damos.
+                    </p>
+<a class="inline-flex items-center gap-2 text-primary font-label-md text-label-md uppercase tracking-wider group w-max" href="#">
+<span class="border-b border-primary pb-1 group-hover:border-transparent transition-colors">Leer la Historia</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" style="font-variation-settings: 'FILL' 0;">arrow_right_alt</span>
+</a>
+</div>
+</article>
+</section>
+<!-- Articles Grid (Bento/Scrapbook Style) -->
+<section class="mb-24">
+<div class="flex items-center gap-4 mb-12">
+<div class="h-px bg-outline-variant flex-grow"></div>
+<h3 class="text-headline-md font-headline-md brand-serif text-primary text-center px-4">Últimas Memorias</h3>
+<div class="h-px bg-outline-variant flex-grow"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Article 1 (Large Square) -->
+<article class="md:col-span-8 scrapbook-card p-3 group cursor-pointer hover:shadow-sm transition-shadow">
+<div class="aspect-video w-full overflow-hidden mb-6 relative">
+<img alt="Making Bags" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A close-up, high-quality editorial shot of a craftsperson's hands working on a canvas tote bag. The scene is brightly lit with natural light falling onto a wooden workbench. The mood is focused and artisanal, highlighting the tactile texture of the fabric and the precision of the work. The color palette features warm creams, terracotta, and dark chocolate tones, consistent with a premium, nostalgic brand identity. The style is detailed and intimate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCecfxfwGZ9gFPqjIIk1WymIZxqTPmJXOug-0HRQMMOrJpf_6xc2dTInnaW-pMhI1qSzmpt1f7QG7zU7fs0EcwL6s2koo_vIF08egNeSFM5x1zr-TeSn3iGJ1oK53kfUBB2rdA5A7plX-RjPPRwJ3DKJrUQSV7TSBfUWApeQfk5VwJvrqy5lF-gHGa-xtLVRx8McZpqzXL8oeSLGUN6CoFZEqmpEsmtJ0YZLwc0oyd9SjWvXPXuJRh-xtC6pNQFBaJRXkYF9X-uL8U"/>
+<div class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm">
+                            Artesanía
+                        </div>
+</div>
+<div class="px-2 pb-4">
+<h4 class="text-headline-md font-headline-md brand-serif text-on-surface mb-3 group-hover:text-primary transition-colors">
+                            Cómo hacemos nuestros bolsos: El proceso detrás del lienzo.
+                        </h4>
+<p class="text-body-md font-body-md text-on-surface-variant line-clamp-2">
+                            Cada bolso que sale de nuestro taller no es solo un producto, es un lienzo en blanco esperando ser llenado con tus historias. Descubre los detalles, la elección de los materiales y el amor que ponemos en cada costura.
+                        </p>
+</div>
+</article>
+<!-- Article 2 (Tall Portrait) -->
+<article class="md:col-span-4 scrapbook-card p-3 flex flex-col group cursor-pointer hover:shadow-sm transition-shadow">
+<div class="aspect-[3/4] w-full overflow-hidden mb-6 relative flex-grow">
+<img alt="Customer Story" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A beautiful, soft-focus portrait of a loyal golden retriever sitting next to a customized canvas tote bag. The setting is a cozy, sunlit living room with natural wood accents. The mood is heartwarming and genuine. The light-mode aesthetic emphasizes warm creams, soft greens, and deep earth tones. The image perfectly captures the brand's 'Stories you can hug' narrative, highlighting the emotional connection between pets and people." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBasBNtczKqcGgsEElFVhFw708blJLKSpoigRx4xpMI0dbSl9ovhB1h_UwFPOQ8jfSF2gFYV2vo8VeGGXLOqHXvyW3rj7Ts-FhMaeF7JMFPw3vXZ1RCiXrCk5IRmRaNVY77gMd9TdcYTMPQB0D2Th5wtAUavomKm8qUVBIq0XayJFFC5wrX9CSAeNndf3wTZQL-zeG4_da-FnNv_4s6kJfBb9m8NKrc3gvMFMfngKZcTxhxeUsE54QkFRUZHiamRfYHzTrHDBG-wso"/>
+<div class="absolute top-4 left-4 bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-label-sm font-label-sm scrapbook-border">
+                            Comunidad
+                        </div>
+</div>
+<div class="px-2 pb-2">
+<h4 class="text-headline-lg-mobile font-headline-lg-mobile brand-serif text-on-surface mb-2 group-hover:text-primary transition-colors">
+                            Historias Reales: La libreta de Sofía y Max
+                        </h4>
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider block mb-2">Hace 3 días</span>
+</div>
+</article>
+<!-- Article 3 (Small Square) -->
+<article class="md:col-span-4 scrapbook-card p-3 group cursor-pointer hover:shadow-sm transition-shadow">
+<div class="aspect-square w-full overflow-hidden mb-4 relative">
+<img alt="Inspiration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A flat lay composition on a warm cream, textured paper background. It features a beautifully designed sketchbook, a couple of pencils, some dried botanicals, and a small cup of tea. The lighting is soft and even, creating a calm, inspiring mood. The aesthetic is minimal yet tactile, perfectly matching the brand's nostalgic, luxury artisanal style. The color palette focuses on earthy browns, sage greens, and warm off-whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5O66sg7Et6OvNJdA8mlbzvUQkxHUKWs2q8olOgwU9FgyEsZn8BMo0glo5p-A8Wf08pvoOm0iTlc9mnFUt0OAQRnFl_8KkVv6m2XgtMSRF4z8K1lKE9FsWoShpYdws5DAv79pTGXnXbsTwy7rZ5i8LD-zRQEPb1gI-GFmtQRw0qwA_hIVPDaEHj73_96mgnnjnJuJ76DbSX2sZ71eDMxiyvAMOzJgyjNXEAdPqx-hfNlk7l9-hWC4xhRkcJ6I2R4ysLfNjVg_d4Go"/>
+</div>
+<div class="px-2">
+<h4 class="text-body-lg font-body-lg font-semibold text-on-surface group-hover:text-primary transition-colors mb-2">
+                            Encontrando inspiración en lo cotidiano.
+                        </h4>
+<p class="text-body-md font-body-md text-on-surface-variant text-sm line-clamp-2">
+                            Una guía para observar los pequeños detalles que hacen que un día normal sea extraordinario.
+                        </p>
+</div>
+</article>
+<!-- Article 4 (Small Square) -->
+<article class="md:col-span-4 scrapbook-card p-3 group cursor-pointer hover:shadow-sm transition-shadow">
+<div class="aspect-square w-full overflow-hidden mb-4 relative">
+<img alt="Behind the Scenes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A candid, warm photo of a small cat curled up sleeping on top of a stack of folded fabric patterns in a cozy workshop. Soft, diffused natural light highlights the textures of the fabric and the cat's fur. The mood is peaceful and charming, evoking a sense of 'home.' The color palette consists of warm creams, terracotta, and soft neutral greys. The image embodies the brand's tactile luxury and familiar tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMwQj4s9dxveWknT5QirR5O9HkNgldn4WlsfH6HOZrEMxRf_ktRt2jQt3yD85gBTBDnNg170xUiZNOXLjXdlHf8F-MPxxSubJ0s77IFBRYs2-WJMmvdZYzYYWxI73z6hEeJ_ZW3LzQU_ubbJ3RkdRb97b1wUuorxXorEj2PmdpbO7pCorZtYRheL76nopX89Rc11m42dJjAFnnU8XlthFoCwmEhzP1A4hU0JCq3ji9lohGAwXy5xSqQIoewpToyEo0RHPzWPVilRI"/>
+</div>
+<div class="px-2">
+<h4 class="text-body-lg font-body-lg font-semibold text-on-surface group-hover:text-primary transition-colors mb-2">
+                            Los verdaderos 'jefes' del taller.
+                        </h4>
+<p class="text-body-md font-body-md text-on-surface-variant text-sm line-clamp-2">
+                            Un vistazo detrás de escena a las travesuras que nos mantienen sonriendo mientras trabajamos.
+                        </p>
+</div>
+</article>
+<!-- Newsletter Callout (Col Span 4) -->
+<div class="md:col-span-4 flex items-center justify-center p-8 bg-surface-container-low scrapbook-border text-center flex-col">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" style="font-variation-settings: 'FILL' 0;">mail</span>
+<h4 class="text-headline-md font-headline-md brand-serif text-on-surface mb-3">Únete a nuestra libreta de direcciones</h4>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 text-sm">Recibe nuevas historias y novedades del taller directamente en tu correo.</p>
+<form class="w-full relative">
+<input class="w-full bg-transparent border-0 border-b border-on-surface-variant text-on-surface focus:ring-0 focus:border-primary placeholder:text-outline text-body-md font-body-md py-2 px-0 mb-4 font-sans focus:outline-none" placeholder="Tu correo electrónico" type="email"/>
+<button class="bg-primary text-on-primary rounded px-6 py-2 w-full font-label-md text-label-md uppercase tracking-wider hover:bg-primary-container transition-colors" type="button">
+                            Suscribirse
+                        </button>
+</form>
+</div>
+</div>
+</section>
+<div class="flex justify-center pb-12">
+<button class="border border-outline-variant text-on-surface px-8 py-3 rounded text-label-md font-label-md uppercase tracking-wider hover:bg-surface-container-high transition-colors">
+                Cargar Más Historias
+            </button>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center py-2 px-4 md:hidden bg-surface-container-low dark:bg-surface-container-lowest border-t border-outline-variant rounded-t-xl content-relative">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="text-label-sm font-label-sm mt-1">Inicio</span>
+</a>
+<a aria-current="page" class="flex flex-col items-center justify-center text-primary bg-primary-fixed-dim/20 rounded-full px-4 py-1 scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="text-label-sm font-label-sm mt-1">Explorar</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">add_circle</span>
+<span class="text-label-sm font-label-sm mt-1">Crear</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+<span class="text-label-sm font-label-sm mt-1">Favoritos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">person</span>
+<span class="text-label-sm font-label-sm mt-1">Perfil</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-12 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter bg-surface-container-highest dark:bg-surface-container border-t border-outline-variant content-relative mt-auto">
+<div class="w-full md:w-auto mb-8 md:mb-0">
+<div class="text-headline-md font-headline-md text-primary brand-serif mb-4">Juan &amp; Beltrán</div>
+<p class="text-body-md font-body-md text-on-surface dark:text-on-surface max-w-xs">
+                © Juan &amp; Beltrán - Historias que se pueden abrazar. Hecho con amor en Argentina.
+            </p>
+</div>
+<div class="flex flex-col md:flex-row gap-8 md:gap-16 w-full md:w-auto">
+<div class="flex flex-col gap-4">
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform focus:ring-1 focus:ring-primary rounded" href="#">Nuestra Historia</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform focus:ring-1 focus:ring-primary rounded" href="#">Términos y Condiciones</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform focus:ring-1 focus:ring-primary rounded" href="#">Envíos y Devoluciones</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform focus:ring-1 focus:ring-primary rounded" href="#">Artesanía Argentina</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contacto - Juan &amp; Beltrán</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#ffeadc",
+                      "tertiary-fixed-dim": "#d2c5ae",
+                      "on-tertiary-fixed": "#211b0c",
+                      "tertiary": "#645b49",
+                      "surface-container-low": "#fff1e9",
+                      "on-secondary-fixed-variant": "#3e4b2f",
+                      "secondary-fixed": "#d8e8c2",
+                      "outline-variant": "#d9c2ba",
+                      "primary": "#8c4a2f",
+                      "on-secondary-fixed": "#131f07",
+                      "surface": "#fff8f5",
+                      "primary-container": "#a96245",
+                      "secondary": "#556345",
+                      "surface-bright": "#fff8f5",
+                      "on-primary-container": "#fffbff",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#ffdbce",
+                      "on-secondary-container": "#5b694a",
+                      "on-secondary": "#ffffff",
+                      "on-background": "#28180b",
+                      "on-primary-fixed-variant": "#71361c",
+                      "inverse-primary": "#ffb599",
+                      "primary-fixed-dim": "#ffb599",
+                      "on-tertiary-container": "#fffbff",
+                      "secondary-container": "#d8e8c2",
+                      "on-primary": "#ffffff",
+                      "surface-container-highest": "#fcddc7",
+                      "on-surface": "#28180b",
+                      "tertiary-fixed": "#eee1c9",
+                      "surface-dim": "#f3d4bf",
+                      "surface-container-high": "#ffe3d0",
+                      "inverse-surface": "#3f2d1e",
+                      "tertiary-container": "#7d7360",
+                      "secondary-fixed-dim": "#bdcca7",
+                      "outline": "#86736c",
+                      "on-tertiary-fixed-variant": "#4e4635",
+                      "surface-tint": "#8e4c31",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed": "#370e00",
+                      "on-tertiary": "#ffffff",
+                      "background": "#fff8f5",
+                      "error-container": "#ffdad6",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface-variant": "#53433d",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#ffede3",
+                      "surface-variant": "#fcddc7"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "margin-desktop": "64px",
+                      "container-max": "1200px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Libre Caslon Text"],
+                      "body-lg": ["Montserrat"],
+                      "label-md": ["Montserrat"],
+                      "headline-md": ["Libre Caslon Text"],
+                      "label-sm": ["Montserrat"],
+                      "headline-lg-mobile": ["Libre Caslon Text"],
+                      "headline-lg": ["Libre Caslon Text"],
+                      "body-md": ["Montserrat"]
+              },
+              "fontSize": {
+                      "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                      "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                      "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                      "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "400" }],
+                      "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500" }],
+                      "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "400" }],
+                      "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                      "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased relative min-h-screen flex flex-col font-body-md text-body-md">
+<div class="noise-overlay"></div>
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full bg-background/95 backdrop-blur-sm z-50 sticky top-0 border-b border-outline-variant">
+<div class="hidden md:flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md uppercase" href="#">Historias</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md uppercase" href="#">Tienda</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md uppercase" href="#">Nosotros</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 text-label-md font-label-md uppercase" href="#">Contacto</a>
+</div>
+<div class="text-center flex-1 md:flex-none">
+<h1 class="text-headline-lg font-headline-lg text-primary">Juan &amp; Beltrán</h1>
+</div>
+<div class="flex gap-4 text-primary">
+<button class="hover:text-primary-container transition-all hover:scale-98">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="hover:text-primary-container transition-all hover:scale-98">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col items-center w-full px-margin-mobile md:px-margin-desktop py-12 md:py-24 max-w-container-max mx-auto gap-20">
+<!-- Hero Section -->
+<section class="text-center max-w-2xl mx-auto flex flex-col items-center gap-6">
+<span class="material-symbols-outlined text-primary text-4xl">edit_square</span>
+<h2 class="text-display-lg font-display-lg text-on-surface">Hablá con el Taller</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant">
+                No somos un formulario automático. Somos artesanos. Contanos tu historia, la idea que tenés en mente, o simplemente pasá a saludar. Nos encanta leer historias que se pueden abrazar.
+            </p>
+</section>
+<!-- Asymmetric Contact Grid -->
+<section class="w-full grid grid-cols-1 md:grid-cols-12 gap-gutter relative">
+<!-- The Story Form (Left Column) -->
+<div class="md:col-span-7 bg-surface-container-low border border-outline-variant p-8 md:p-12 relative z-10 rounded-lg">
+<h3 class="text-headline-md font-headline-md mb-8 text-primary">Escribinos tu historia</h3>
+<form class="flex flex-col gap-8">
+<div class="flex flex-col gap-2">
+<label class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider" for="name">Tu Nombre</label>
+<input class="bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary text-body-lg font-body-lg px-0 py-2 placeholder:text-on-surface-variant/50" id="name" placeholder="¿Cómo te llamás?" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider" for="email">Correo Electrónico</label>
+<input class="bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary text-body-lg font-body-lg px-0 py-2 placeholder:text-on-surface-variant/50" id="email" placeholder="Para poder responderte" type="email"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider" for="message">Tu Historia</label>
+<textarea class="bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary text-body-lg font-body-lg px-0 py-2 resize-none placeholder:text-on-surface-variant/50" id="message" placeholder="Contanos qué estás buscando..." rows="5"></textarea>
+</div>
+<button class="self-start mt-4 bg-primary text-on-primary px-8 py-3 rounded text-label-md font-label-md hover:bg-primary-container transition-colors flex items-center gap-2" type="submit">
+                        Enviar mensaje
+                        <span class="material-symbols-outlined text-sm">send</span>
+</button>
+</form>
+</div>
+<!-- Contact Info & Map (Right Column) -->
+<div class="md:col-span-5 flex flex-col gap-8 mt-12 md:mt-24 md:-ml-12 relative z-20">
+<!-- Info Card -->
+<div class="bg-surface-container-highest border border-outline-variant p-8 shadow-sm rounded-lg flex flex-col gap-6">
+<h4 class="text-headline-md font-headline-md text-on-surface border-b border-outline-variant pb-4">El Taller</h4>
+<div class="flex flex-col gap-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">location_on</span>
+<div>
+<p class="text-label-md font-label-md text-on-surface uppercase">Visitanos</p>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1">Av. Santa Fe 1234, CABA<br/>Buenos Aires, Argentina</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">schedule</span>
+<div>
+<p class="text-label-md font-label-md text-on-surface uppercase">Horarios</p>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1">Lunes a Viernes: 10hs a 18hs<br/>Sábados con cita previa</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">chat</span>
+<div>
+<p class="text-label-md font-label-md text-on-surface uppercase">WhatsApp</p>
+<a class="text-body-md font-body-md text-primary hover:underline mt-1 block" href="#">+54 9 11 1234-5678</a>
+</div>
+</div>
+</div>
+<div class="flex gap-4 mt-2 pt-6 border-t border-outline-variant">
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-colors" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+<!-- Map Image placeholder -->
+<div class="w-full h-64 bg-tertiary-fixed-dim rounded-lg border border-outline-variant overflow-hidden relative group cursor-pointer">
+<img alt="Mapa de Buenos Aires" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300" data-alt="A beautifully styled, minimalist street map of Buenos Aires, Argentina. The map features a warm, sepia-toned color palette with subtle terracotta accents, aligning with a high-end, tactile luxury aesthetic. Streets are fine lines on a textured, cream-colored background, giving the impression of an old artisanal document. A delicate pin marks a specific location in the Recoleta neighborhood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlhfX7gZaB7ni9SghoxKC5kQg-2CYjBpKUP1P7vrFi_gFwjy44JFEZSp4DCFBA4UnCN-6LlbZC1Eo0OgvQrShA9anE4w3crvKw-aJBfNb3d94_4dyK7b23r6zBGlJvHm7jj0HmSSWsM7bHBitNpFi3SnLrwV8vGxXp_dGHqZJ0CqtBRa-YUSl2onlXi7HoQZweJNAPeDeT_BGg_PhW3vjSXQSef5miDcy47LPfApBGz1EBReqT8L-t3rl0rCSo2PPxwFtdUd-Yy4M"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="bg-surface/90 px-4 py-2 rounded-full border border-outline-variant flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-primary text-sm">map</span>
+<span class="text-label-sm font-label-sm uppercase text-on-surface tracking-wider">Ver en mapa</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter bg-surface-container-highest border-t border-outline-variant mt-auto z-10 relative">
+<div class="flex flex-col gap-4">
+<h2 class="text-headline-md font-headline-md text-primary">Juan &amp; Beltrán</h2>
+<p class="text-body-md font-body-md text-on-surface">© Juan &amp; Beltrán - Historias que se pueden abrazar. Hecho con amor en Argentina.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-6 md:gap-8">
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary hover:translate-x-1 transition-transform focus:ring-1 focus:ring-primary outline-none" href="#">Nuestra Historia</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary hover:translate-x-1 transition-transform focus:ring-1 focus:ring-primary outline-none" href="#">Términos y Condiciones</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary hover:translate-x-1 transition-transform focus:ring-1 focus:ring-primary outline-none" href="#">Envíos y Devoluciones</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary hover:translate-x-1 transition-transform focus:ring-1 focus:ring-primary outline-none" href="#">Artesanía Argentina</a>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center py-2 px-4 md:hidden bg-surface-container-low border-t border-outline-variant rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-sm font-label-sm mt-1">Inicio</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-label-sm font-label-sm mt-1">Explorar</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="text-label-sm font-label-sm mt-1">Crear</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-label-sm font-label-sm mt-1">Favoritos</span>
+</a>
+<!-- Active Tab fallback for Contact, grouping under Profile/User intent -->
+<a class="flex flex-col items-center justify-center text-primary bg-primary-fixed-dim/20 rounded-full px-4 py-1 scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined filled">person</span>
+<span class="text-label-sm font-label-sm mt-1">Perfil</span>
+</a>
+</nav>
+<script>
+        // Simple script to handle form interaction aesthetic
+        document.querySelectorAll('input, textarea').forEach(element => {
+            element.addEventListener('focus', function() {
+                this.parentElement.querySelector('label').classList.add('text-primary');
+            });
+            element.addEventListener('blur', function() {
+                this.parentElement.querySelector('label').classList.remove('text-primary');
+            });
+        });
+    </script>
+</body></html>

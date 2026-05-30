@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Juan &amp; Beltrán - Nuestra Historia</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#ffeadc",
+                    "tertiary-fixed-dim": "#d2c5ae",
+                    "on-tertiary-fixed": "#211b0c",
+                    "tertiary": "#645b49",
+                    "surface-container-low": "#fff1e9",
+                    "on-secondary-fixed-variant": "#3e4b2f",
+                    "secondary-fixed": "#d8e8c2",
+                    "outline-variant": "#d9c2ba",
+                    "primary": "#8c4a2f",
+                    "on-secondary-fixed": "#131f07",
+                    "surface": "#fff8f5",
+                    "primary-container": "#a96245",
+                    "secondary": "#556345",
+                    "surface-bright": "#fff8f5",
+                    "on-primary-container": "#fffbff",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#ffdbce",
+                    "on-secondary-container": "#5b694a",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#28180b",
+                    "on-primary-fixed-variant": "#71361c",
+                    "inverse-primary": "#ffb599",
+                    "primary-fixed-dim": "#ffb599",
+                    "on-tertiary-container": "#fffbff",
+                    "secondary-container": "#d8e8c2",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#fcddc7",
+                    "on-surface": "#28180b",
+                    "tertiary-fixed": "#eee1c9",
+                    "surface-dim": "#f3d4bf",
+                    "surface-container-high": "#ffe3d0",
+                    "inverse-surface": "#3f2d1e",
+                    "tertiary-container": "#7d7360",
+                    "secondary-fixed-dim": "#bdcca7",
+                    "outline": "#86736c",
+                    "on-tertiary-fixed-variant": "#4e4635",
+                    "surface-tint": "#8e4c31",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#370e00",
+                    "on-tertiary": "#ffffff",
+                    "background": "#fff8f5",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface-variant": "#53433d",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#ffede3",
+                    "surface-variant": "#fcddc7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Libre Caslon Text"],
+                    "body-lg": ["Montserrat"],
+                    "label-md": ["Montserrat"],
+                    "headline-md": ["Libre Caslon Text"],
+                    "label-sm": ["Montserrat"],
+                    "headline-lg-mobile": ["Libre Caslon Text"],
+                    "headline-lg": ["Libre Caslon Text"],
+                    "body-md": ["Montserrat"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                    "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                    "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                    "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "400" }],
+                    "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500" }],
+                    "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "400" }],
+                    "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                    "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        /* Global Texture Overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            background-image: repeating-radial-gradient(circle at 10% 10%, rgba(217, 194, 186, 0.03) 0px, transparent 1px);
+            background-size: 8px 8px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-background/95 backdrop-blur-sm z-50 shadow-[0_4px_30px_rgba(40,24,11,0.02)]">
+<!-- Navigation Links (Left) -->
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-label-md font-label-md uppercase text-on-surface-variant hover:text-primary transition-colors hover:text-primary-container transition-all" href="#">Historias</a>
+<a class="text-label-md font-label-md uppercase text-on-surface-variant hover:text-primary transition-colors hover:text-primary-container transition-all" href="#">Tienda</a>
+<a aria-current="page" class="text-label-md font-label-md uppercase text-primary font-bold border-b-2 border-primary pb-1 opacity-80 scale-98 hover:text-primary-container transition-all" href="#">Nosotros</a>
+<a class="text-label-md font-label-md uppercase text-on-surface-variant hover:text-primary transition-colors hover:text-primary-container transition-all" href="#">Contacto</a>
+</nav>
+<!-- Brand Logo (Center) -->
+<div class="text-headline-lg font-headline-lg text-primary md:absolute md:left-1/2 md:-translate-x-1/2 font-extrabold tracking-tight">
+            Juan &amp; Beltrán
+        </div>
+<!-- Trailing Icons (Right) -->
+<div class="flex gap-4 items-center">
+<button aria-label="Favorite" class="text-primary hover:text-primary-container transition-all">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<button aria-label="Shopping Bag" class="text-primary hover:text-primary-container transition-all">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-24 flex flex-col gap-[100px]">
+<!-- Hero Title -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-center">
+<h1 class="text-display-lg font-display-lg text-primary mb-6">Nuestra Historia</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                El origen de una amistad tejida a mano, y el viaje para convertir los recuerdos más puros en piezas que perduran en el tiempo.
+            </p>
+</section>
+<!-- The Story (Asymmetric Editorial Layout) -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 flex flex-col gap-6">
+<h2 class="text-headline-md font-headline-md text-primary">Un niño, un gato y un refugio</h2>
+<div class="text-body-md font-body-md text-on-surface-variant space-y-4">
+<p>Todo comenzó en un pequeño rincón iluminado por la luz de la tarde. Juan, con sus manos pequeñas y curiosas, y Beltrán, un compañero felino de ronroneos profundos. Juntos descubrieron que el verdadero lujo no reside en lo inalcanzable, sino en aquello que se siente como el hogar.</p>
+<p>Esa sensación de seguridad, ese abrazo invisible que reconforta el alma, es lo que en Argentina llamamos <em>querencia</em>. Nuestro propósito nació de ese vínculo: capturar la esencia de lo íntimo y materializarlo a través de la artesanía.</p>
+</div>
+</div>
+<div class="md:col-span-6 md:col-start-7">
+<div class="relative w-full aspect-[4/5] p-2 border border-outline-variant rounded-sm bg-surface-container-low">
+<img alt="Fotografía artística de un gato descansando" class="w-full h-full object-cover" data-alt="A highly artistic, editorial-style photograph of a softly lit scene featuring a young boy and a cat in a warmly decorated room. The lighting is natural and nostalgic, casting gentle shadows that emphasize the texture of woven fabrics and wooden surfaces. The color palette revolves around warm creams, soft terracottas, and deep earthy tones, evoking a sense of tactile luxury and intimate emotional comfort." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQQC-IBUaX-Rj0HRrMSGc6LIxNbYB8T2KzDTbGLaII6Juc4PXRMofxpgBtcKB8wjU36eToqd0Z2U1hfAvjVzid1kS4RpXMQIMCQdklN-GLDZe3gxKRat8fCt_vrlvsbzY-XpP5Mw5xb7vxvYSUHRUX3Iugul3hUDgMv5QNiaRj7kEoycHEnQoWeFePJp7yHLebfXhGuxnWYOhHaBbCqKxzfXFVy2ZdC9c4V-zIiTYdKD4vOpgIktWWNdf2UjuwoxhqLjc_6WQ-OMw"/>
+</div>
+</div>
+</section>
+<!-- Specialty Component - The Story Block -->
+<section class="w-full bg-surface-container py-24 px-margin-mobile md:px-margin-desktop relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 mix-blend-multiply" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%238c4a2f\' fill-opacity=\'1\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');"></div>
+<div class="max-w-4xl mx-auto text-center relative z-10 flex flex-col items-center gap-8">
+<span class="material-symbols-outlined text-primary text-4xl" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<blockquote class="text-display-lg font-display-lg text-primary italic">
+                    "Convertir emociones en objetos. Historias que se pueden abrazar."
+                </blockquote>
+<p class="text-body-lg font-body-lg text-on-surface-variant">Esa es nuestra promesa.</p>
+<button class="mt-4 px-8 py-3 bg-primary text-on-primary rounded font-label-md text-label-md uppercase tracking-wider hover:bg-primary-container transition-colors">
+                    Descubrir la Tienda
+                </button>
+</div>
+</section>
+<!-- Artisanal Process (Bento Grid) -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+<div class="text-center mb-16">
+<h2 class="text-headline-lg font-headline-lg text-primary">El Taller y las Manos</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-4">Cada pieza es un testimonio de tiempo, paciencia y herencia artesanal.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+<!-- Bento Item 1 (Large) -->
+<div class="md:col-span-2 md:row-span-2 border border-outline-variant bg-surface relative group overflow-hidden">
+<img alt="Manos trabajando arcilla" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90" data-alt="A close-up, high-end lifestyle shot of artisan hands gently molding a piece of textured ceramic clay. The scene is bathed in warm, directional morning light that highlights the tactile grains of the clay and the rustic, artisanal tools nearby. The aesthetic is clean and minimalist, relying on earthy terracotta and warm cream tones to convey a premium, handcrafted brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdNmBg6lprHb_F5Q2-BvdB3eAA7pRKbQTKQjSPwRgin1ejonlE0NOOAjx8ofC4taTx2P_aPDX7F3VIV61_vk61GrDjGA3xT2987c2ZvUo6HamsAYQZ_aEeeC0GM9k1tQ8HghScLm1k8ylzJmjsnfd85GeP_5e_o6UD_6SfN9nFSf5nlyEwNOXdAulP2eKdya7R2FVuANc5WKSic2ff0c2aTsec_hEuJYi5pUZYCUcuIsWztIDjYM-FtKk1zwizqd8vdAh8E0RScbA"/>
+<div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-background/90 to-transparent">
+<h3 class="text-headline-md font-headline-md text-on-background">Materiales Nobles</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2">Seleccionamos cada elemento por su capacidad de contar una historia.</p>
+</div>
+</div>
+<!-- Bento Item 2 -->
+<div class="border border-outline-variant bg-surface flex flex-col justify-center items-center p-8 text-center">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">handyman</span>
+<h3 class="text-headline-md font-headline-md text-primary">Hecho a Mano</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2">Sin atajos, respetando el ritmo orgánico de la creación.</p>
+</div>
+<!-- Bento Item 3 -->
+<div class="border border-outline-variant bg-surface relative group overflow-hidden">
+<img alt="Detalle de taller artesanal" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90" data-alt="A beautifully composed flat lay or subtle angle shot of an artisanal workshop table. Scattered on the warm cream wooden surface are delicate botanical sketches, a vintage measuring tape, and swatches of raw linen and terracotta leather. The lighting is soft and diffused, creating a serene, nostalgic atmosphere that speaks to careful craftsmanship and high-end editorial design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyN4_N3uDYvZ-Vv6iAikW5lFPHE2XeJ0tH0A6Ob-iCZoOJkxx6Nn67eqp4cz4gOZxiF2UrzXitKvsqnJV6NNNabnHqskAAmvT7eE-UiC72OH4PxibnL_6HkLDsUXZnbzq-QYIgL6CEhRa1ugsvxLUcyX2PEZh_FGgiWE7rBnTj-xosBdcsiSe8bcrxxkRZGiQEQ7gv3WoQnwfJeLg3HWL8FUz7uYNVFYhJjfPiH1mBy6yZ7zaw-64vZnjM1Ofl4nfnOo6_0Pp207M"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter bg-surface-container-highest dark:bg-surface-container border-t border-outline-variant mt-auto">
+<div class="flex flex-col gap-4 max-w-sm">
+<span class="text-headline-md font-headline-md text-primary">Juan &amp; Beltrán</span>
+<p class="text-body-md font-body-md text-on-surface">© Juan &amp; Beltrán - Historias que se pueden abrazar. Hecho con amor en Argentina.</p>
+</div>
+<div class="flex flex-col gap-3">
+<a class="text-label-md font-label-md text-primary underline hover:translate-x-1 transition-transform focus:ring-1 focus:ring-primary outline-none" href="#">Nuestra Historia</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform focus:ring-1 focus:ring-primary outline-none" href="#">Términos y Condiciones</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform focus:ring-1 focus:ring-primary outline-none" href="#">Envíos y Devoluciones</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform focus:ring-1 focus:ring-primary outline-none" href="#">Artesanía Argentina</a>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Juan &amp; Beltrán - Tus Recuerdos Listos para Viajar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#ffeadc",
+                        "tertiary-fixed-dim": "#d2c5ae",
+                        "on-tertiary-fixed": "#211b0c",
+                        "tertiary": "#645b49",
+                        "surface-container-low": "#fff1e9",
+                        "on-secondary-fixed-variant": "#3e4b2f",
+                        "secondary-fixed": "#d8e8c2",
+                        "outline-variant": "#d9c2ba",
+                        "primary": "#8c4a2f",
+                        "on-secondary-fixed": "#131f07",
+                        "surface": "#fff8f5",
+                        "primary-container": "#a96245",
+                        "secondary": "#556345",
+                        "surface-bright": "#fff8f5",
+                        "on-primary-container": "#fffbff",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#ffdbce",
+                        "on-secondary-container": "#5b694a",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#28180b",
+                        "on-primary-fixed-variant": "#71361c",
+                        "inverse-primary": "#ffb599",
+                        "primary-fixed-dim": "#ffb599",
+                        "on-tertiary-container": "#fffbff",
+                        "secondary-container": "#d8e8c2",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#fcddc7",
+                        "on-surface": "#28180b",
+                        "tertiary-fixed": "#eee1c9",
+                        "surface-dim": "#f3d4bf",
+                        "surface-container-high": "#ffe3d0",
+                        "inverse-surface": "#3f2d1e",
+                        "tertiary-container": "#7d7360",
+                        "secondary-fixed-dim": "#bdcca7",
+                        "outline": "#86736c",
+                        "on-tertiary-fixed-variant": "#4e4635",
+                        "surface-tint": "#8e4c31",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#370e00",
+                        "on-tertiary": "#ffffff",
+                        "background": "#fff8f5",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#53433d",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#ffede3",
+                        "surface-variant": "#fcddc7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Libre Caslon Text"],
+                        "body-lg": ["Montserrat"],
+                        "label-md": ["Montserrat"],
+                        "headline-md": ["Libre Caslon Text"],
+                        "label-sm": ["Montserrat"],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "body-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .texture-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen relative flex flex-col antialiased">
+<div class="texture-overlay"></div>
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full bg-background/95 backdrop-blur-sm z-50 docked full-width top-0 border-b border-outline-variant flat no shadows">
+<div class="flex-1 md:hidden"></div>
+<nav class="hidden md:flex gap-gutter items-center flex-1">
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-y-[-2px] hover:text-primary-container transition-all" href="#">Historias</a>
+<a class="text-label-md font-label-md text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary-container transition-all" href="#">Tienda</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-y-[-2px] hover:text-primary-container transition-all" href="#">Nosotros</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-y-[-2px] hover:text-primary-container transition-all" href="#">Contacto</a>
+</nav>
+<div class="flex-shrink-0 flex justify-center flex-1 md:flex-none">
+<a class="text-headline-lg font-headline-lg text-primary tracking-tight" href="/">Juan &amp; Beltrán</a>
+</div>
+<div class="flex items-center justify-end gap-4 flex-1 text-primary">
+<button aria-label="Favoritos" class="hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button aria-label="Carrito" class="hover:text-primary-container transition-colors relative">
+<span class="material-symbols-outlined fill">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-tertiary text-on-tertiary text-[10px] w-4 h-4 rounded-full flex items-center justify-center">2</span>
+</button>
+</div>
+</header>
+<main class="flex-grow pt-12 pb-24 px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+<!-- Header Section -->
+<div class="text-center mb-16 md:mb-24">
+<h1 class="text-headline-lg-mobile md:text-display-lg font-headline-lg-mobile md:font-display-lg text-on-background mb-4 text-center">Tus Recuerdos Listos para Viajar</h1>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-2xl mx-auto">Revisa los tesoros que has seleccionado. Cada pieza está esperando comenzar una nueva historia en tu hogar.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+<!-- Cart Items -->
+<div class="lg:col-span-7 flex flex-col gap-8">
+<!-- Item 1 -->
+<div class="flex flex-col sm:flex-row gap-6 p-6 border border-outline-variant bg-surface relative group">
+<button aria-label="Eliminar" class="absolute top-4 right-4 text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="w-full sm:w-32 h-40 sm:h-auto flex-shrink-0 bg-surface-container-low border border-outline-variant relative overflow-hidden">
+<img alt="Manta tejida a mano" class="absolute inset-0 w-full h-full object-cover" data-alt="A beautifully handcrafted woven blanket, resting over the arm of a wooden chair in a sunlit room. The light mode aesthetic features soft, warm sunlight highlighting the intricate textures of the yarn. The color palette focuses on creamy whites, soft terracottas, and earthy sage greens, creating a nostalgic, tactile, and comforting mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFAEifaeiuudETfKRojkrpvLes4NL35RtZDZ_kk8xrOJGcSlcFEG6HfVsd3Y2tOlK5E1yht4fxFeeVH-RpE2_LBsef3hiE0v4ElQb4XURbBM7hsjNSCD5TmdGWbBm6xHtRqzap0GYD7bq4eJR9YkKCl50bcG_jzTSOASLBy6VLQENEjgPOkbPmaIMxdp3YSnoWcboBDzrlFfyWSTCOfnYYhcQDS9f0iuP69eG4U_p0DUpr0gvM_3PaT3yoMwaq-IRmf9SXpe2qSAI"/>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div>
+<span class="inline-block px-2 py-1 bg-secondary-container text-on-secondary-container text-label-sm font-label-sm mb-2 opacity-80">Tejido a Mano</span>
+<h3 class="text-headline-md font-headline-md text-on-background mb-1">Manta 'Abrazo del Sur'</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4">Lana merino pura, color crudo natural.</p>
+</div>
+<div class="flex justify-between items-center mt-auto">
+<div class="flex items-center border border-outline-variant rounded bg-surface-container-lowest">
+<button class="px-3 py-1 text-on-surface-variant hover:text-primary" onclick="updateQty(this, -1)">-</button>
+<input class="w-10 text-center bg-transparent border-none text-body-md font-body-md p-0 focus:ring-0" min="1" type="number" value="1"/>
+<button class="px-3 py-1 text-on-surface-variant hover:text-primary" onclick="updateQty(this, 1)">+</button>
+</div>
+<span class="text-body-lg font-body-lg text-primary">$45.000</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col sm:flex-row gap-6 p-6 border border-outline-variant bg-surface relative group">
+<button aria-label="Eliminar" class="absolute top-4 right-4 text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="w-full sm:w-32 h-40 sm:h-auto flex-shrink-0 bg-surface-container-low border border-outline-variant relative overflow-hidden">
+<img alt="Vela artesanal en cuenco de cerámica" class="absolute inset-0 w-full h-full object-cover" data-alt="A handmade ceramic bowl filled with creamy soy wax, functioning as a candle. It sits on a rustic wooden table scattered with dried botanical elements. The scene uses a light mode aesthetic with soft, diffused daylight. The colors are dominated by warm whites, deep browns, and subtle natural earthy tones, evoking a serene and sensory luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7Bp4Cbees8_l5pdd65sS9lZudv2Hs-pmcRSMN-8aXE6NZAlIA2wwYU7W6vh9s7iqYon7cucd0b7wQIKBNoLa6r7fFjLKzbPJZP634IVVO9gxVuvYfmGfJAiiJmcKFnzKG6jl5Ncp3uObWSNqXx-nQL4u0tayUdMFL-kE6g39GRE9tWufX5VqlhvWBcACSR3FVpDz3eX4-n8_MOLIUxJmSDbx48t8LCDkW_nCpXjRxOOxpu9hl42j24kDMS8BObmLTFsZb-khRiFQ"/>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div>
+<span class="inline-block px-2 py-1 bg-secondary-container text-on-secondary-container text-label-sm font-label-sm mb-2 opacity-80">Edición Limitada</span>
+<h3 class="text-headline-md font-headline-md text-on-background mb-1">Luz de Invierno</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4">Vela de soja en cuenco de cerámica patagónica.</p>
+</div>
+<div class="flex justify-between items-center mt-auto">
+<div class="flex items-center border border-outline-variant rounded bg-surface-container-lowest">
+<button class="px-3 py-1 text-on-surface-variant hover:text-primary" onclick="updateQty(this, -1)">-</button>
+<input class="w-10 text-center bg-transparent border-none text-body-md font-body-md p-0 focus:ring-0" min="1" type="number" value="2"/>
+<button class="px-3 py-1 text-on-surface-variant hover:text-primary" onclick="updateQty(this, 1)">+</button>
+</div>
+<span class="text-body-lg font-body-lg text-primary">$18.500</span>
+</div>
+</div>
+</div>
+<!-- Gift Message Section -->
+<div class="mt-8 p-8 border border-outline-variant bg-surface-container-low relative">
+<div class="absolute top-0 right-0 p-4 opacity-20 text-tertiary">
+<span class="material-symbols-outlined text-4xl">favorite</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-background mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+                        ¿Es un regalo?
+                    </h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">Escribiremos tu mensaje a mano en una tarjeta de papel plantable que acompañará tu pedido.</p>
+<div class="relative">
+<textarea class="w-full bg-surface-container-lowest border-b border-outline-variant border-x-0 border-t-0 focus:border-primary focus:ring-0 resize-none text-body-md font-body-md text-on-background p-4" placeholder="Escribe aquí las palabras que quieras abrazar..." rows="4"></textarea>
+</div>
+</div>
+</div>
+<!-- Order Summary -->
+<div class="lg:col-span-5">
+<div class="sticky top-24 p-8 border border-outline-variant bg-surface">
+<h2 class="text-headline-md font-headline-md text-on-background mb-6 border-b border-outline-variant pb-4">Resumen de la Historia</h2>
+<div class="flex flex-col gap-4 mb-8">
+<div class="flex justify-between text-body-md font-body-md text-on-surface-variant">
+<span>Subtotal (3 artículos)</span>
+<span>$82.000</span>
+</div>
+<div class="flex justify-between text-body-md font-body-md text-on-surface-variant">
+<span>Envío</span>
+<span class="text-primary italic">Se calcula en WhatsApp</span>
+</div>
+</div>
+<div class="flex justify-between items-center mb-8 border-t border-outline-variant pt-6">
+<span class="text-body-lg font-body-lg text-on-background">Total estimado</span>
+<span class="text-headline-lg font-headline-lg text-primary">$82.000</span>
+</div>
+<button class="w-full bg-primary text-on-primary rounded py-4 text-label-md font-label-md uppercase tracking-wider hover:bg-primary-container transition-colors flex items-center justify-center gap-2 mb-4">
+<span class="material-symbols-outlined fill">chat</span>
+                        Finalizar por WhatsApp
+                    </button>
+<p class="text-label-sm font-label-sm text-center text-on-surface-variant">Al continuar, un miembro de la familia Juan &amp; Beltrán te atenderá personalmente para coordinar el envío y pago.</p>
+<div class="mt-8 flex justify-center gap-4 text-outline opacity-50">
+<span class="material-symbols-outlined" title="Pago Seguro">lock</span>
+<span class="material-symbols-outlined" title="Envío a todo el país">local_shipping</span>
+<span class="material-symbols-outlined" title="Atención Personalizada">support_agent</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center py-2 px-4 md:hidden bg-surface-container-low border-t border-outline-variant rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="text-label-sm font-label-sm">Inicio</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded" href="#">
+<span class="material-symbols-outlined mb-1">search</span>
+<span class="text-label-sm font-label-sm">Explorar</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary bg-primary-fixed-dim/20 rounded-full px-4 py-1 scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined fill mb-1">shopping_bag</span>
+<span class="text-label-sm font-label-sm">Tienda</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded" href="#">
+<span class="material-symbols-outlined mb-1">favorite</span>
+<span class="text-label-sm font-label-sm">Favoritos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="text-label-sm font-label-sm">Perfil</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-12 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter bg-surface-container-highest border-t border-outline-variant flat no shadows mb-16 md:mb-0">
+<div class="flex flex-col gap-4">
+<span class="text-headline-md font-headline-md text-primary">Juan &amp; Beltrán</span>
+<p class="text-body-md font-body-md text-on-surface max-w-xs">Historias que se pueden abrazar. Encontrando belleza en la imperfección y calor en lo hecho a mano.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="text-label-md font-label-md text-on-surface uppercase mb-2">Descubre</h4>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform focus:ring-1 focus:ring-primary inline-block" href="#">Nuestra Historia</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform focus:ring-1 focus:ring-primary inline-block" href="#">Artesanía Argentina</a>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="text-label-md font-label-md text-on-surface uppercase mb-2">Soporte</h4>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform focus:ring-1 focus:ring-primary inline-block" href="#">Términos y Condiciones</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform focus:ring-1 focus:ring-primary inline-block" href="#">Envíos y Devoluciones</a>
+</div>
+<div class="w-full md:w-auto mt-8 md:mt-0 pt-8 md:pt-0 border-t md:border-none border-outline-variant text-center md:text-right">
+<p class="text-body-md font-body-md text-on-surface opacity-70">© Juan &amp; Beltrán - Historias que se pueden abrazar. Hecho con amor en Argentina.</p>
+</div>
+</footer>
+<script>
+        function updateQty(btn, change) {
+            const input = btn.parentElement.querySelector('input');
+            let val = parseInt(input.value) + change;
+            if(val >= 1) {
+                input.value = val;
+                // In a real app, trigger cart total update here
+            }
+        }
+    </script>
+</body></html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nuestra Tienda de Recuerdos - Juan &amp; Beltrán</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#fff8f5",
+                        "on-primary-container": "#fffbff",
+                        "on-surface": "#28180b",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#3e4b2f",
+                        "outline-variant": "#d9c2ba",
+                        "primary-fixed-dim": "#ffb599",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#5b694a",
+                        "on-tertiary-fixed": "#211b0c",
+                        "on-tertiary-fixed-variant": "#4e4635",
+                        "surface-tint": "#8e4c31",
+                        "on-tertiary-container": "#fffbff",
+                        "tertiary-fixed-dim": "#d2c5ae",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#ffb599",
+                        "on-background": "#28180b",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#eee1c9",
+                        "primary-container": "#a96245",
+                        "primary-fixed": "#ffdbce",
+                        "inverse-on-surface": "#ffede3",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#fff8f5",
+                        "tertiary": "#645b49",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#fcddc7",
+                        "surface-container-low": "#fff1e9",
+                        "surface-container": "#ffeadc",
+                        "on-primary-fixed-variant": "#71361c",
+                        "secondary-fixed": "#d8e8c2",
+                        "secondary": "#556345",
+                        "surface-variant": "#fcddc7",
+                        "outline": "#86736c",
+                        "tertiary-container": "#7d7360",
+                        "secondary-container": "#d8e8c2",
+                        "surface-container-high": "#ffe3d0",
+                        "secondary-fixed-dim": "#bdcca7",
+                        "surface": "#fff8f5",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#53433d",
+                        "inverse-surface": "#3f2d1e",
+                        "primary": "#8c4a2f",
+                        "on-primary-fixed": "#370e00",
+                        "surface-dim": "#f3d4bf",
+                        "on-secondary-fixed": "#131f07",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Montserrat"],
+                        "label-sm": ["Montserrat"],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "headline-md": ["Libre Caslon Text"],
+                        "body-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .bento-item-large {
+            grid-column: span 1;
+        }
+        @media (min-width: 768px) {
+            .bento-item-large {
+                grid-column: span 2;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col relative">
+<!-- TopAppBar -->
+<header class="docked full-width top-0 border-b border-outline-variant flat no shadows flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full bg-background/95 backdrop-blur-sm z-50 sticky top-0">
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md uppercase" href="#">Historias</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 text-label-md font-label-md uppercase" href="#">Tienda</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md uppercase" href="#">Nosotros</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md uppercase" href="#">Contacto</a>
+</div>
+<div class="flex-1 flex justify-center md:justify-center">
+<h1 class="text-headline-md md:text-headline-lg font-headline-md md:font-headline-lg text-primary">Juan &amp; Beltrán</h1>
+</div>
+<div class="flex items-center gap-4 text-primary">
+<button aria-label="Favoritos" class="hover:text-primary-container transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+<button aria-label="Carrito de compras" class="hover:text-primary-container transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">
+<!-- Header Section -->
+<section class="text-center mb-16 max-w-2xl mx-auto">
+<h2 class="text-display-lg font-display-lg text-primary mb-4">Nuestra Tienda de Recuerdos</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant">
+                Descubrí objetos únicos, diseñados para atesorar las historias que más importan. Cada pieza es un abrazo hecho a mano.
+            </p>
+</section>
+<!-- Filtering -->
+<section class="mb-12 flex flex-wrap justify-center gap-4">
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant text-label-md font-label-md hover:border-primary hover:text-primary transition-colors bg-white/50">Todos</button>
+<button class="px-6 py-2 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-md font-label-md shadow-sm">Mascotas</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant text-label-md font-label-md hover:border-primary hover:text-primary transition-colors bg-white/50">Infancia</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant text-label-md font-label-md hover:border-primary hover:text-primary transition-colors bg-white/50">Frases</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant text-label-md font-label-md hover:border-primary hover:text-primary transition-colors bg-white/50">Fotografías</button>
+</section>
+<!-- Products Grid (Bento Style) -->
+<section class="bento-grid">
+<!-- Product 1 (Large) -->
+<article class="bento-item-large group relative bg-surface-container-lowest border border-outline-variant p-4 flex flex-col md:flex-row gap-6 items-center transition-all duration-300 hover:border-primary">
+<div class="w-full md:w-1/2 aspect-square md:aspect-[4/3] bg-surface-container-low relative overflow-hidden flex items-center justify-center">
+<img alt="Tote bag with custom pet portrait" class="object-cover w-full h-full" data-alt="A beautifully crafted, cream-colored canvas tote bag resting on a rustic wooden table in a sunlit artisan workshop. The tote bag features a delicate, hand-drawn illustration of a cute orange and white cat wearing a blue collar. Soft, natural lighting highlights the textured fabric of the bag and the subtle sage green accents in the background, creating a warm, nostalgic, and premium aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzpvDCxfWTxLtazWSceMNgWuWy235YnFGQa9BbOeTqBWttcwCnYVMtvm-8iTt2XzXqAexsJ1pJEewFwrn2knJu_eEB2MOnJMlPOD7amuL735R16bBaFKR66bePbPi0IV2XxnF9OOkNwpAV76QEH9gv2n5HgSMsHQg_o7fxY5P-fB_XZpu2DZevzTSNDtyfIG7VDhrYaRMMdaIFm2gSRlDOrVPH-n9y28R5HTYrzELRZp2xoJcrPrSikgYHws33-3Fp0QCGjVCcgfc"/>
+<div class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">pets</span>
+                        Hecho a mano
+                    </div>
+</div>
+<div class="w-full md:w-1/2 flex flex-col justify-center text-left py-4">
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider mb-2">Tote Bag Personalizada</span>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">Tu mascota, siempre con vos</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 line-clamp-3">
+                        Llevá el recuerdo de tu compañero más fiel a todas partes. Ilustraciones hechas a mano sobre lienzo de algodón orgánico, capturando su esencia única.
+                    </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-body-lg font-body-lg text-primary-container">$45.000 ARS</span>
+<button class="bg-primary hover:bg-primary-container text-on-primary rounded-full px-6 py-2 text-label-md font-label-md transition-colors flex items-center gap-2">
+<span>Ver Detalles</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product 2 -->
+<article class="group relative bg-surface-container-lowest border border-outline-variant flex flex-col transition-all duration-300 hover:border-primary">
+<div class="w-full aspect-[4/5] bg-surface-container-low relative overflow-hidden border-b border-outline-variant flex items-center justify-center p-6">
+<img alt="Canvas cushion with child illustration" class="object-cover w-full h-full shadow-sm" data-alt="A soft, cream-colored linen cushion placed gently on an antique armchair in a cozy, sun-drenched room. The cushion features a delicate, vintage-style watercolor illustration of a little girl with a sun hat and a small orange kitten. The lighting is soft and golden, emphasizing the comforting, nostalgic, and high-end artisanal quality of the piece." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfwn7KGsjqRhiChuDv1jrnJlndKnLDsCD6iN-xLfsUs3RK_7iiJfxEm9cNecQukgci-FUGT7yK1V5l_sR7i47Idt8zKTxvK-staJuyRVcvehGX_MyZRpFpLNBI7FB4zfqKOQhcn7JSISTNUHohZjwjSU215_6VwTO2i06js-GYgy0lxVI9vWoPBSt8Bqyf07wHBpfFaZBCTD2gtfbmQqWfRwhjrmk2TIaGWrMf1HN0kD2Lf_c7ETs1ztbSChh9-55yTegA5OaicpU"/>
+</div>
+<div class="p-6 flex flex-col flex-grow text-center">
+<h3 class="text-headline-lg-mobile font-headline-lg-mobile text-on-surface mb-2 group-hover:text-primary transition-colors">Almohadón "Dulzura"</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4 line-clamp-2">
+                        Un rincón de ternura para tu hogar. Lienzo rústico con estampas que abrazan.
+                    </p>
+<div class="mt-auto flex flex-col items-center gap-3">
+<span class="text-body-lg font-body-lg text-primary-container">$32.000 ARS</span>
+<button class="w-full border border-outline hover:border-primary text-on-surface hover:text-primary rounded-full px-4 py-2 text-label-md font-label-md transition-colors">
+                            Agregar al carrito
+                        </button>
+</div>
+</div>
+</article>
+<!-- Product 3 -->
+<article class="group relative bg-surface-container-lowest border border-outline-variant flex flex-col transition-all duration-300 hover:border-primary">
+<div class="w-full aspect-[4/5] bg-surface-container-low relative overflow-hidden border-b border-outline-variant flex items-center justify-center p-6">
+<img alt="Ceramic mug with paw print" class="object-cover w-full h-full shadow-sm rounded-lg" data-alt="A beautifully crafted, handmade ceramic mug in a warm cream color, resting on an open book upon a rustic wooden table. The mug features a subtle, debossed paw print and a delicate terracotta rim. Soft morning light streams through a window, creating a serene, comforting, and intimate atmosphere that highlights the artisanal texture of the ceramics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY_irvg2SEK9TcFzYGw5F6r4PO-p5qZCSFcB6yusAs9DR_IjHZWYNF1C5h79GphSPl9gIwmmULKeoENbd_B4dfAbmSvbPG1Vd67s2yJb-0U5XakaV1gehbwuxtOnDs6khYDj1dzu1xr9SnZujOeA42B-z9tYgrkuxNKqGmIBRF0sk2Bqt1Kxd06rDGke1IJO1ZcNggToz6mq7V_i18X5KPM987si4AYakL9QB8MhNVy03R2OsGhnBQVjzJKfF4UcZAjKvL-S6oi0g"/>
+<button class="absolute top-4 right-4 text-on-surface-variant hover:text-primary bg-white/80 rounded-full p-2 backdrop-blur-sm transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-6 flex flex-col flex-grow text-center">
+<h3 class="text-headline-lg-mobile font-headline-lg-mobile text-on-surface mb-2 group-hover:text-primary transition-colors">Taza "Huellas"</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4 line-clamp-2">
+                        Cerámica artesanal para acompañar tus mañanas con el mejor recuerdo.
+                    </p>
+<div class="mt-auto flex flex-col items-center gap-3">
+<span class="text-body-lg font-body-lg text-primary-container">$18.500 ARS</span>
+<button class="w-full border border-outline hover:border-primary text-on-surface hover:text-primary rounded-full px-4 py-2 text-label-md font-label-md transition-colors">
+                            Agregar al carrito
+                        </button>
+</div>
+</div>
+</article>
+</section>
+<!-- The Story Block (Specialty Component) -->
+<section class="mt-24 mb-12 border-t border-b border-outline-variant py-16 flex flex-col md:flex-row items-center gap-12 bg-surface-container-lowest relative overflow-hidden">
+<div class="w-full md:w-1/2 aspect-video md:aspect-[3/2] relative px-4 md:px-0 md:pl-12">
+<img alt="Artisan working on a canvas" class="object-cover w-full h-full border border-outline-variant shadow-sm" data-alt="A close-up, highly detailed shot of an artisan's hands carefully painting a delicate botanical illustration onto a piece of cream-colored linen canvas. The workspace is cluttered with small pots of paint, brushes, and sketches, bathed in warm, diffused natural light from a nearby window. The scene conveys a sense of meticulous craftsmanship, artistic dedication, and nostalgic warmth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC0wbJYQZL6Gt2rZG2BkRBU_wG2z2RQLimsuNJCwmtNTAp423PuLKjLkGeHm9vmAA6VSiNrv6zfr-fMS0ioTWn8D6SN1BVO23l6LqOCI3KrtTN8-3clNu0Ien_L7jnnIEa13uPkMtP4NegfVmt1WinM3eQNc_n3LtsyN98O5cnicVaWO-4m5btl3nJNhMxMRn5pgVoeBv6T5KXNc0WO6pNRf2bjpb1E13QNXncgyjZS2iKcrh7GS5NOAal2WfZ8-RLSqsMyzvfCG4"/>
+</div>
+<div class="w-full md:w-1/2 px-8 md:pr-16 text-center md:text-left flex flex-col justify-center">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[48px] mb-4">format_quote</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mb-6 leading-tight">"Creemos que los objetos cotidianos deben ser contenedores de memoria. Historias que se pueden abrazar cada vez que volvemos a casa."</h2>
+<p class="text-label-md font-label-md text-on-surface-variant uppercase tracking-widest mb-8">El Taller de Juan &amp; Beltrán</p>
+<div>
+<a class="inline-flex items-center gap-2 text-primary hover:text-primary-container font-label-md text-label-md transition-colors border-b border-primary pb-1" href="#">
+                        Leer Nuestra Historia
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center py-2 px-4 md:hidden docked full-width bottom-0 rounded-t-xl border-t border-outline-variant flat no shadows bg-surface-container-low">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors w-16 py-1 rounded-lg" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-sm font-label-sm mt-1">Inicio</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary bg-primary-fixed-dim/20 rounded-full px-4 py-1 hover:bg-surface-container-high transition-colors Active: scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="text-label-sm font-label-sm mt-1 font-bold">Explorar</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors w-16 py-1 rounded-lg" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="text-label-sm font-label-sm mt-1">Crear</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors w-16 py-1 rounded-lg" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-label-sm font-label-sm mt-1">Favoritos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors w-16 py-1 rounded-lg" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-label-sm font-label-sm mt-1">Perfil</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-12 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter bg-surface-container-highest border-t border-outline-variant flat no shadows pb-24 md:pb-12">
+<div class="mb-8 md:mb-0 max-w-sm">
+<h2 class="text-headline-md font-headline-md text-primary mb-4">Juan &amp; Beltrán</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">© Juan &amp; Beltrán - Historias que se pueden abrazar. Hecho con amor en Argentina.</p>
+</div>
+<div class="flex flex-col gap-3">
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform Focus: ring-1 ring-primary" href="#">Nuestra Historia</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform Focus: ring-1 ring-primary" href="#">Términos y Condiciones</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform Focus: ring-1 ring-primary" href="#">Envíos y Devoluciones</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform Focus: ring-1 ring-primary" href="#">Artesanía Argentina</a>
+</div>
+</footer>
+</body></html>

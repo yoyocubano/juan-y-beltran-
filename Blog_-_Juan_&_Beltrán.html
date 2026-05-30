@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Juan &amp; Beltrán - El Diario de Beltrán</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-grain {
+            position: relative;
+        }
+        .bg-grain::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0.03;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            z-index: 10;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#ffeadc",
+                      "tertiary-fixed-dim": "#d2c5ae",
+                      "on-tertiary-fixed": "#211b0c",
+                      "tertiary": "#645b49",
+                      "surface-container-low": "#fff1e9",
+                      "on-secondary-fixed-variant": "#3e4b2f",
+                      "secondary-fixed": "#d8e8c2",
+                      "outline-variant": "#d9c2ba",
+                      "primary": "#8c4a2f",
+                      "on-secondary-fixed": "#131f07",
+                      "surface": "#fff8f5",
+                      "primary-container": "#a96245",
+                      "secondary": "#556345",
+                      "surface-bright": "#fff8f5",
+                      "on-primary-container": "#fffbff",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#ffdbce",
+                      "on-secondary-container": "#5b694a",
+                      "on-secondary": "#ffffff",
+                      "on-background": "#28180b",
+                      "on-primary-fixed-variant": "#71361c",
+                      "inverse-primary": "#ffb599",
+                      "primary-fixed-dim": "#ffb599",
+                      "on-tertiary-container": "#fffbff",
+                      "secondary-container": "#d8e8c2",
+                      "on-primary": "#ffffff",
+                      "surface-container-highest": "#fcddc7",
+                      "on-surface": "#28180b",
+                      "tertiary-fixed": "#eee1c9",
+                      "surface-dim": "#f3d4bf",
+                      "surface-container-high": "#ffe3d0",
+                      "inverse-surface": "#3f2d1e",
+                      "tertiary-container": "#7d7360",
+                      "secondary-fixed-dim": "#bdcca7",
+                      "outline": "#86736c",
+                      "on-tertiary-fixed-variant": "#4e4635",
+                      "surface-tint": "#8e4c31",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed": "#370e00",
+                      "on-tertiary": "#ffffff",
+                      "background": "#fff8f5",
+                      "error-container": "#ffdad6",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface-variant": "#53433d",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#ffede3",
+                      "surface-variant": "#fcddc7"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "margin-desktop": "64px",
+                      "container-max": "1200px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Libre Caslon Text"
+                      ],
+                      "body-lg": [
+                              "Montserrat"
+                      ],
+                      "label-md": [
+                              "Montserrat"
+                      ],
+                      "headline-md": [
+                              "Libre Caslon Text"
+                      ],
+                      "label-sm": [
+                              "Montserrat"
+                      ],
+                      "headline-lg-mobile": [
+                              "Libre Caslon Text"
+                      ],
+                      "headline-lg": [
+                              "Libre Caslon Text"
+                      ],
+                      "body-md": [
+                              "Montserrat"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.08em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased bg-grain min-h-screen flex flex-col relative">
+<!-- TopAppBar (Web) -->
+<header class="hidden md:flex justify-between items-center px-margin-desktop py-4 w-full bg-background/95 backdrop-blur-sm z-50 sticky top-0 border-b border-outline-variant">
+<div class="flex-1 flex justify-start gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md uppercase" href="#">Historias</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md uppercase" href="#">Tienda</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md uppercase" href="#">Nosotros</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md uppercase" href="#">Contacto</a>
+</div>
+<div class="flex-1 flex justify-center">
+<a class="text-headline-lg font-headline-lg text-primary text-center" href="#">Juan &amp; Beltrán</a>
+</div>
+<div class="flex-1 flex justify-end gap-6 text-primary">
+<button aria-label="favorite" class="hover:text-primary-container transition-all">
+<span class="material-symbols-outlined text-headline-md font-headline-md">favorite</span>
+</button>
+<button aria-label="shopping_bag" class="hover:text-primary-container transition-all">
+<span class="material-symbols-outlined text-headline-md font-headline-md">shopping_bag</span>
+</button>
+</div>
+</header>
+<!-- TopAppBar (Mobile Fallback for Branding) -->
+<header class="md:hidden flex justify-center items-center px-margin-mobile py-4 w-full bg-background/95 backdrop-blur-sm z-50 sticky top-0 border-b border-outline-variant">
+<a class="text-headline-lg-mobile font-headline-lg-mobile text-primary text-center" href="#">Juan &amp; Beltrán</a>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pb-24 md:pb-0 z-0 relative">
+<!-- Header Section -->
+<section class="w-full px-margin-mobile md:px-margin-desktop pt-16 md:pt-24 pb-12 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-4xl mb-4" data-icon="menu_book">menu_book</span>
+<h1 class="text-display-lg font-display-lg text-primary mb-6 max-w-3xl mx-auto md:text-display-lg text-headline-lg-mobile font-headline-lg-mobile md:font-display-lg">El Diario de Beltrán</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Historias reales, el proceso de nuestro taller y reflexiones sobre cómo cuidamos los recuerdos que nos hacen ser quienes somos.
+            </p>
+</section>
+<!-- Magazine Style Grid -->
+<section class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-24">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Featured Article (Bento Large) -->
+<article class="md:col-span-8 group cursor-pointer border border-tertiary-fixed-dim bg-surface rounded-sm overflow-hidden flex flex-col md:flex-row h-full transition-all hover:border-outline">
+<div class="md:w-3/5 h-64 md:h-auto overflow-hidden relative">
+<img alt="Manuscritos antiguos y una pluma sobre una mesa de madera rústica." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A highly detailed close-up shot of an artisanal workspace. An antique, leather-bound notebook rests open on a weathered, raw wooden table. A delicate fountain pen lies beside it, along with loose sheets of heavily textured, cream-colored cotton paper. The scene is lit by soft, warm natural light streaming from a nearby window, creating gentle shadows that highlight the tactile luxury of the materials. The mood is nostalgic, deeply personal, and reflective, perfectly aligning with a high-end heritage brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApGjviYysQCO1ZbDdGmhOqWZyTjSuBGs8pS2-Lsk5ZbiF1WNfTH1UJjD1Le2l5vREaLEJJCH3aYl2o6f1BEhU6nwbZjQn_27MbVvbXbtQtL6Y4n4k4kYTWw_0vrAKoleKFEJ7VmT-sYz_Be0sfPBV-8doOQfACfjfrJvaP1x6rd-ZocbojbGgkIBDGgTwkBNnTJykrxRk-8cG6l6MUkcul1_1_D2qtqtj9iCc-0ohDDQur2L-x5832ngI7gjWva4R_SjZHoL0em3I"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary/10 text-secondary text-label-sm font-label-sm px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-md">El Taller</span>
+</div>
+</div>
+<div class="md:w-2/5 p-8 flex flex-col justify-center bg-surface">
+<time class="text-label-sm font-label-sm text-outline mb-3">12 de Octubre, 2023</time>
+<h2 class="text-headline-lg font-headline-lg text-primary mb-4 md:text-headline-lg text-headline-lg-mobile font-headline-lg-mobile md:font-headline-lg">El Arte de Encuadernar Memorias</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-8 line-clamp-3">
+                            Cada libro que sale de nuestro taller lleva impresas las huellas de un proceso artesanal que respeta los tiempos de los materiales nobles. Te invitamos a conocer el detrás de escena.
+                        </p>
+<div class="mt-auto flex items-center text-primary font-label-md text-label-md group-hover:text-primary-container transition-colors">
+<span>Leer la historia</span>
+<span class="material-symbols-outlined ml-2 text-sm transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Small Article 1 -->
+<article class="md:col-span-4 group cursor-pointer border border-tertiary-fixed-dim bg-surface rounded-sm flex flex-col transition-all hover:border-outline">
+<div class="h-48 overflow-hidden relative border-b border-tertiary-fixed-dim">
+<img alt="Detalle de manos trabajando cuero natural." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A macro photography shot focusing on artisan hands carefully working with raw, terracotta-colored leather. The hands are gently folding the material, highlighting the natural grain and supple texture of the hide. The background is beautifully blurred, keeping all focus on the craftsmanship. Soft, warm directional light enhances the tactile luxury and earth tones of the leather, creating an intimate, artisanal mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv_PbBlBQEJtMJkJLVAf_uUbijpUu9nSTOgS2Fwv8IqMCUDteYklSukB945U7Qy2yMWMnQZW6MKQkJ9T5qZu301c21ZdS33iy8pXrx9POa-1QguywN4BdJs8Axn0eNcz16qDc47aiBxLiBESxzJnfc-LaNQDj_uM8Xf_ZQzqtpr9PuB2-08pC8awRTfTofyfoFYWg6rOv-Uan1qlXlBhyPr86qiSKCplogR1_SVJ9fzh1SL5df0F-pfQSMhBEm4uikOO76wtYAo-U"/>
+<div class="absolute top-4 left-4">
+<span class="bg-surface/80 text-on-surface text-label-sm font-label-sm px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-md">Historias</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<time class="text-label-sm font-label-sm text-outline mb-2">05 de Octubre, 2023</time>
+<h3 class="text-headline-md font-headline-md text-primary mb-3">La Promesa de un Viaje en el Tiempo</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 line-clamp-2">
+                            Cómo una libreta que viajó por toda la Patagonia se convirtió en el tesoro más preciado de la familia.
+                        </p>
+<div class="mt-auto pt-4 border-t border-tertiary-fixed-dim/50">
+<span class="text-primary font-label-md text-label-md uppercase tracking-wider group-hover:underline decoration-1 underline-offset-4">Leer</span>
+</div>
+</div>
+</article>
+<!-- Small Article 2 -->
+<article class="md:col-span-4 group cursor-pointer border border-tertiary-fixed-dim bg-surface rounded-sm flex flex-col transition-all hover:border-outline mt-8 md:mt-0">
+<div class="h-48 overflow-hidden relative border-b border-tertiary-fixed-dim">
+<img alt="Taza de café humeante junto a unos lentes y un cuaderno." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A top-down lifestyle shot of a cozy, elegant morning setting. A steaming cup of dark coffee sits in an artisanal ceramic mug on a light wood table next to a pair of wire-rimmed glasses and a beautifully crafted, warm cream-colored journal. A delicate, hand-drawn botanical illustration is visible on the open page. The lighting is bright yet soft, evocative of a calm, reflective morning. The overall aesthetic is minimalist, warm, and highly tactile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAox5Z3yeJj_zAH4uZEM5emqOB83mi2IGB9R62y-u7eFmrXEj4anNiQypYe5go0N5XowvGlCUYAmdPt0lkFfwMsQNawZncvw2SsNdQnIdVocCkI0JThVHRdxerTrx-QxndlCYYQ1RqtXpfKhh5OV3ubwka01IX5aBzXcdEzZ8jhjpvXrWh1_YwKlxDg0qa13CY0bxDhSIZrbQ5JovDLv7g4wGxEgNiPHEKl64uWxzBxNY4KbzBOOJIxXkx0sqCNg7comL2MDSN8U9A"/>
+<div class="absolute top-4 left-4">
+<span class="bg-surface/80 text-on-surface text-label-sm font-label-sm px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-md">Cuidados</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<time class="text-label-sm font-label-sm text-outline mb-2">28 de Septiembre, 2023</time>
+<h3 class="text-headline-md font-headline-md text-primary mb-3">Cómo Preservar el Papel de Algodón</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 line-clamp-2">
+                            Consejos prácticos para que las páginas de tus diarios mantengan su textura y calidez por generaciones.
+                        </p>
+<div class="mt-auto pt-4 border-t border-tertiary-fixed-dim/50">
+<span class="text-primary font-label-md text-label-md uppercase tracking-wider group-hover:underline decoration-1 underline-offset-4">Leer</span>
+</div>
+</div>
+</article>
+<!-- Text Only Article -->
+<article class="md:col-span-4 group cursor-pointer border border-tertiary-fixed-dim bg-surface-container-low rounded-sm flex flex-col justify-center p-8 transition-all hover:bg-surface-container hover:border-outline mt-8 md:mt-0 relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 opacity-5">
+<span class="material-symbols-outlined text-[160px]" data-icon="local_florist">local_florist</span>
+</div>
+<time class="text-label-sm font-label-sm text-outline mb-4 relative z-10">15 de Septiembre, 2023</time>
+<h3 class="text-headline-md font-headline-md text-primary mb-4 relative z-10">Reflexiones sobre el Silencio</h3>
+<p class="text-body-md font-body-md text-on-surface-variant italic mb-8 relative z-10">
+                        "En un mundo lleno de ruido, el acto de sentarse frente a una página en blanco es, quizás, la forma más pura de rebelión tranquila."
+                    </p>
+<div class="mt-auto flex items-center text-primary font-label-md text-label-md uppercase tracking-wider relative z-10 group-hover:text-primary-container">
+<span>Leer Ensayo</span>
+</div>
+</article>
+<!-- Wide Article -->
+<article class="md:col-span-8 group cursor-pointer border border-tertiary-fixed-dim bg-surface rounded-sm flex flex-col md:flex-row transition-all hover:border-outline mt-8 md:mt-0 overflow-hidden">
+<div class="md:w-1/2 p-8 flex flex-col justify-center bg-surface order-2 md:order-1">
+<time class="text-label-sm font-label-sm text-outline mb-3">02 de Septiembre, 2023</time>
+<h2 class="text-headline-md font-headline-md text-primary mb-4">El Regalo de una Abuela a su Nieta</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-8 line-clamp-3">
+                            Recibimos un encargo especial: restaurar un cuaderno de recetas familiar de hace 60 años. Esta es la historia de cómo la memoria se transmite a través de los sabores y las tintas descoloridas.
+                        </p>
+<div class="mt-auto pt-4 border-t border-tertiary-fixed-dim/50 flex items-center justify-between">
+<span class="text-primary font-label-md text-label-md uppercase tracking-wider group-hover:underline decoration-1 underline-offset-4">Leer</span>
+<span class="material-symbols-outlined text-outline text-sm" data-icon="favorite_border">favorite_border</span>
+</div>
+</div>
+<div class="md:w-1/2 h-64 md:h-auto overflow-hidden relative order-1 md:order-2 border-b md:border-b-0 md:border-l border-tertiary-fixed-dim">
+<img alt="Manos mayores sosteniendo un cuaderno desgastado." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A deeply emotional close-up portrait shot focusing on the frail, wrinkled hands of an elderly person delicately holding a small, visibly aged and worn leather notebook. The leather is scuffed and carries a rich patina. The lighting is soft and cinematic, highlighting the textures of both the hands and the heritage material. The mood is tender, nostalgic, and speaks volumes about family legacy and cherished memories. Set against a subtly blurred warm, domestic background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6WmNJU8Wn02vk4nUeSiRR0oxCIEygYuLyQRpKydgkfOn0liXZVTv4-WNx8J9sR4eMi6mze5Ud9M2KXRB_RK__eV-heAoceOekjZBNRxbdqM4WGCO9coGg3WraXjUqyNHpgza3NosqVpMJ_KKnFKFoucQGJi88vVj6MkgrOn2XS_o6OViD3VvAVluffA4wh8JzLTD0qolzrtvPmCtln0vbeXb2F80y3EnRFpww-cG0W3B5Ux1A0Jom3VazVMpobOKfJOySydEzopU"/>
+<div class="absolute top-4 right-4">
+<span class="bg-surface/80 text-on-surface text-label-sm font-label-sm px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-md">Historias</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Load More -->
+<div class="w-full flex justify-center mt-16">
+<button class="px-8 py-3 border border-tertiary-fixed-dim text-on-surface font-label-md text-label-md uppercase tracking-widest rounded-sm hover:bg-surface-container-low hover:border-outline transition-all duration-300">
+                    Cargar más historias
+                 </button>
+</div>
+</section>
+<!-- The Story Block (Specialty Component) -->
+<section class="w-full bg-surface-container-low border-y border-tertiary-fixed-dim my-12 md:my-24 py-16 px-margin-mobile md:px-margin-desktop relative overflow-hidden">
+<!-- Decorative botanical motif -->
+<div class="absolute top-0 right-0 -mt-10 -mr-10 opacity-10 pointer-events-none transform rotate-12">
+<svg fill="none" height="200" viewbox="0 0 24 24" width="200" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 22C12 22 19 18 19 12C19 6 12 2 12 2C12 2 5 6 5 12C5 18 12 22 12 22Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+<path d="M12 22V12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+<path d="M12 16C12 16 16 14 16 10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+<path d="M12 14C12 14 9 12 9 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+</svg>
+</div>
+<div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12 relative z-10">
+<div class="w-full md:w-1/2 aspect-square md:aspect-auto md:h-[500px] border border-tertiary-fixed-dim rounded-sm overflow-hidden p-2 bg-surface">
+<img alt="Escritorio iluminado por el sol con herramientas artesanales y papeles." class="w-full h-full object-cover rounded-sm" data-alt="A beautifully styled, high-end lifestyle photograph of an artist's sunny workspace. The scene features a heavy, solid oak desk scattered with premium artisanal tools: a brass ruler, spools of natural linen thread, a bone folder, and stacks of thick, handmade cotton paper. Sunlight streams in, creating sharp, dramatic, yet warm shadows across the textured surfaces. The aesthetic is sophisticated, minimalist luxury, emphasizing natural materials and the quiet dignity of slow craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo5JfnQ4-0sJUCFp16KjU0MkF9P8pgA9wDGzFpKLzRM6ktC7LNWkZKPDCjXb-6PFX7L33PoPU9q3dUtYPhVddqBpEvgtVI2xREJdrX18YPQ7Ce-51AaL1OI6Px3QZTzYX6Rwlxf1kCSiEE8v3-diQrJXSpPfi1lqzuTid-0xEl3qRzU80yXhiYVu5xQXVbYItAgJilus0Gk1XM18GKw7wfo9Vlgvn2yhn8Ij0xNCLs2JS_Ar3w1BdcTkthpEsS12oqbPRE6VnsCqo"/>
+</div>
+<div class="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left">
+<span class="material-symbols-outlined text-primary text-3xl mb-6 mx-auto md:mx-0" data-icon="format_quote">format_quote</span>
+<h3 class="text-display-lg font-display-lg text-primary mb-6 leading-tight text-headline-lg-mobile font-headline-lg-mobile md:font-display-lg md:text-display-lg">
+                         "Creemos que los objetos más hermosos son aquellos que están diseñados para ser gastados por el tiempo y el amor."
+                     </h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-8 uppercase tracking-widest text-sm">
+                         Manifiesto del Taller
+                     </p>
+<div>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider py-3 px-8 rounded transition-colors shadow-sm">
+                             Conoce Nuestro Proceso
+                         </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Minimal -->
+<section class="w-full max-w-2xl mx-auto px-margin-mobile text-center pb-24">
+<span class="material-symbols-outlined text-secondary text-2xl mb-4" data-icon="mail">mail</span>
+<h4 class="text-headline-md font-headline-md text-primary mb-4">Cartas desde el Taller</h4>
+<p class="text-body-md font-body-md text-on-surface-variant mb-8">
+                 Suscríbete para recibir en tu correo nuestras historias, inspiraciones y novedades sobre nuevas ediciones limitadas, antes que nadie.
+             </p>
+<form class="flex flex-col sm:flex-row gap-4 justify-center items-end" onsubmit="event.preventDefault();">
+<div class="w-full sm:w-auto flex-grow max-w-sm relative">
+<label class="sr-only" for="email_subscribe">Tu correo electrónico</label>
+<input class="w-full bg-surface border-0 border-b border-tertiary-fixed-dim focus:ring-0 focus:border-primary text-body-md font-body-md text-on-surface py-3 px-2 placeholder-on-surface-variant/50 transition-colors" id="email_subscribe" placeholder="tu@correo.com" type="email"/>
+<span class="absolute left-2 -top-4 text-label-sm font-label-sm text-outline uppercase tracking-wider text-[10px]">Correo Electrónico</span>
+</div>
+<button class="w-full sm:w-auto bg-surface-container-highest border border-tertiary hover:bg-tertiary hover:text-on-tertiary text-on-surface font-label-md text-label-md uppercase tracking-widest py-3 px-6 rounded-sm transition-colors mt-4 sm:mt-0" type="submit">
+                     Suscribirse
+                 </button>
+</form>
+</section>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center py-2 px-4 md:hidden bg-surface-container-low dark:bg-surface-container-lowest border-t border-outline-variant rounded-t-xl pb-safe">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-lg min-w-[64px]" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="text-label-sm font-label-sm">Inicio</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary bg-primary-fixed-dim/20 rounded-full px-4 py-1 hover:bg-surface-container-high transition-colors min-w-[64px] scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="search">search</span>
+<span class="text-label-sm font-label-sm font-bold">Explorar</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-lg min-w-[64px]" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="add_circle">add_circle</span>
+<span class="text-label-sm font-label-sm">Crear</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-lg min-w-[64px]" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="favorite">favorite</span>
+<span class="text-label-sm font-label-sm">Favoritos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-lg min-w-[64px]" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="text-label-sm font-label-sm">Perfil</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-12 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter bg-surface-container-highest dark:bg-surface-container border-t border-outline-variant mb-16 md:mb-0 relative z-10">
+<div class="flex flex-col gap-4 max-w-sm">
+<span class="text-headline-md font-headline-md text-primary">Juan &amp; Beltrán</span>
+<p class="text-body-md font-body-md text-on-surface dark:text-on-surface">© Juan &amp; Beltrán - Historias que se pueden abrazar. Hecho con amor en Argentina.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-8 md:gap-16 mt-8 md:mt-0">
+<nav class="flex flex-col gap-3">
+<span class="text-label-sm font-label-sm uppercase tracking-widest text-outline mb-1">Explorar</span>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform focus:ring-1 focus:ring-primary outline-none rounded-sm w-max" href="#">Nuestra Historia</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform focus:ring-1 focus:ring-primary outline-none rounded-sm w-max" href="#">Artesanía Argentina</a>
+</nav>
+<nav class="flex flex-col gap-3">
+<span class="text-label-sm font-label-sm uppercase tracking-widest text-outline mb-1">Soporte</span>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform focus:ring-1 focus:ring-primary outline-none rounded-sm w-max" href="#">Envíos y Devoluciones</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform focus:ring-1 focus:ring-primary outline-none rounded-sm w-max" href="#">Términos y Condiciones</a>
+</nav>
+</div>
+</footer>
+<!-- Safe area padding for mobile bottom nav -->
+<style>
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+    </style>
+</body></html>
